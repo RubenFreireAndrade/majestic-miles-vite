@@ -6,7 +6,7 @@ import {AiOutlineMail} from 'react-icons/ai';
 export default function NavBar() {
     return (
         <>
-            <div class="sticky top-0 p-4 flex flex-row justify-evenly items-center bg-blue-400 text-white">
+            <div class="sticky top-0 p-4 flex flex-row justify-evenly items-center bg-blue-400 text-white z-50">
                 <Link to={'/'} class="m-1 font-bold underline text-[2rem]">
                     Majestic Miles
                 </Link>

@@ -1,12 +1,5 @@
 import React, {useState, useEffect} from 'react';
 
-// import frontMerc from '../../assets/FrontMerc.jpg';
-// import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
-// import frontMercBlack from '../../assets/FrontMercBlack.jpg';
-// import frontMercBlackTrans from '../../assets/MercBlackCar.png';
-
-// const images = [frontMercBlack, sideFrontMerc, frontMerc];
-
 export default function Carousel({images}) {
     const [currentIndex, setCurrentIndex] = useState(0);
 

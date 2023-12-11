@@ -6,6 +6,7 @@ import frontMerc from '../../assets/FrontMerc.jpg';
 import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
 import frontMercBlack from '../../assets/FrontMercBlack.jpg';
 import frontMercBlackTrans from '../../assets/MercBlackCar2.png';
+import CustomerForm from '../layouts/CustomerForm';
 
 export default function Home() {
     const images = [frontMercBlackTrans, frontMercBlack];
@@ -14,9 +15,12 @@ export default function Home() {
         <>
             <Carousel images={images} />
 
-            <section class="text-center font-bold text-[2rem]">
-                BOOK NOW SECTION WITH TEXT FIELD? THIS SECTION COULD HAVE A QUICK SUMMARY OF WHAT MM IS SELLING
+            <section class="text-center">
+                THIS IS THE SECTION FOR WHAT MM IS SELLING. DO THIS BY DEMONSTRATING WHAT COMES WITH WHEN ORDERING
+                MAJESTIC MILES.
             </section>
+
+            <CustomerForm />
 
             <section class="text-center font-bold text-[2rem] border border-black p-4 bg-blue-400 text-white">
                 Our Services
