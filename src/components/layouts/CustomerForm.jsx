@@ -19,7 +19,23 @@ export default function CustomerForm() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const fetching = await fetch('../../../functions/api/sendmail');
+        //const fetching = await fetch('../../../functions/api/sendmail');
+
+        try {
+            // Send data to the Cloudflare worker endpoint
+            await fetch('/api/sendmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Optionally, you can handle success or redirect the user
+            console.log('Booking data sent to Cloudflare worker successfully');
+        } catch (error) {
+            console.error('Error sending booking data to Cloudflare worker:', error);
+        }
     };
 
     return (
