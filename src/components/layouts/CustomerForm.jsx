@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+//import some from '../../../functions/api/sendmail'
 
 export default function CustomerForm() {
     const [formData, setFormData] = useState({
@@ -18,15 +19,7 @@ export default function CustomerForm() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        try {
-            // Send data to the Express server
-            await axios.post('https://3c897024.majestic-miles-vite.pages.dev/api/sendmail', formData);
-
-            // Optionally, you can handle success or redirect the user
-            console.log('Booking data sent successfully');
-        } catch (error) {
-            console.error('Error sending booking data:', error);
-        }
+        const fetching = await fetch('../../../functions/api/sendmail');
     };
 
     return (
