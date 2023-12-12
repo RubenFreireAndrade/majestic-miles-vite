@@ -20,7 +20,7 @@ export default function CustomerForm() {
         e.preventDefault();
         try {
             // Send data to the Express server
-            await axios.post('https://3c897024.majestic-miles-vite.pages.dev/sendmail', formData);
+            await axios.post('https://3c897024.majestic-miles-vite.pages.dev/api/sendmail', formData);
 
             // Optionally, you can handle success or redirect the user
             console.log('Booking data sent successfully');
