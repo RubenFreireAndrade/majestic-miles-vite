@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import axios from 'axios';
-//import some from '../../../functions/api/sendmail'
 
 export default function CustomerForm() {
     const [formData, setFormData] = useState({
@@ -19,7 +18,6 @@ export default function CustomerForm() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        //const fetching = await fetch('../../../functions/api/sendmail');
 
         try {
             // Send data to the Cloudflare worker endpoint
