@@ -116,7 +116,7 @@ export default function CustomerForm() {
                 <div className="text-center mt-4">
                     <button
                         type="submit"
-                        className="bg-blue-400 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+                        className="bg-mm-black text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
                         onClick={handleSubmit}>
                         Submit
                     </button>

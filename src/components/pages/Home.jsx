@@ -22,7 +22,7 @@ export default function Home() {
 
             <CustomerForm />
 
-            <section class="text-center font-bold text-[2rem] border border-black p-4 bg-blue-400 text-white">
+            <section class="text-center font-bold text-[2rem] border border-black p-4 bg-mm-black text-white">
                 Our Services
             </section>
 
