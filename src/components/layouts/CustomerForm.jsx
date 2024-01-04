@@ -25,13 +25,13 @@ export default function CustomerForm() {
     const [pickup, setPickup] = useState('');
     const [destination, setDestination] = useState('');
     
-    //console.log(pickup.label);
-    //console.log(destination.label);
+    console.log(pickup.label);
+    console.log(destination);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        pickup: pickup.label,
-        destination: destination.label,
+        pickup: JSON.stringify(pickup.label),
+        destination: JSON.stringify(destination.label),
         additional_info: '',
     });
 
