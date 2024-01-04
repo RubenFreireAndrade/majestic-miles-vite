@@ -20,16 +20,18 @@ export default function CustomerForm() {
         fetchData();
     }, []);
 
-    console.log('TST' + JSON.stringify(autoApiKey));
-
+    //console.log('TST' + JSON.stringify(autoApiKey));
+    
     const [pickup, setPickup] = useState('');
     const [destination, setDestination] = useState('');
-
+    
+    //console.log(pickup.label);
+    //console.log(destination.label);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        pickup: pickup.value,
-        destination: destination.value,
+        pickup: pickup.label,
+        destination: destination.label,
         additional_info: '',
     });
 
