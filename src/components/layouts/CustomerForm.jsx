@@ -1,9 +1,18 @@
-import {useEffect, useState} from 'react';
-import axios from 'axios';
+import {useEffect, useRef, useState} from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 export default function CustomerForm() {
-    const [autoApiKey, setAutoApiKey] = useState(null);
+    const [pickup, setPickup] = useState('');
+    const [destination, setDestination] = useState('');
+    const [autoApiKey, setAutoApiKey] = useState('');
+
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        pickup: '',
+        destination: '',
+        additional_info: '',
+    });
 
     useEffect(() => {
         // Make a GET request when the component mounts
@@ -20,23 +29,11 @@ export default function CustomerForm() {
         fetchData();
     }, []);
 
-    //console.log('TST' + JSON.stringify(autoApiKey));
-    
-    const [pickup, setPickup] = useState('');
-    const [destination, setDestination] = useState('');
-    
-    console.log(pickup.label);
-    console.log(destination);
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        pickup: JSON.stringify(pickup.label),
-        destination: JSON.stringify(destination.label),
-        additional_info: '',
-    });
-
     const handleChange = e => {
         setFormData({...formData, [e.target.name]: e.target.value});
+        formData.pickup = pickup.label;
+        formData.destination = destination.label;
+        console.log(formData);
     };
 
     const handleSubmit = async e => {
@@ -110,7 +107,6 @@ export default function CustomerForm() {
                                 apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
-
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700">Destination:</label>
                             <GooglePlacesAutocomplete
