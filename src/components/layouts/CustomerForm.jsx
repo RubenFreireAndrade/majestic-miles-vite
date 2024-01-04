@@ -1,14 +1,35 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 export default function CustomerForm() {
+    const [autoApiKey, setAutoApiKey] = useState(null);
+
+    useEffect(() => {
+        // Make a GET request when the component mounts
+        const fetchData = async () => {
+            try {
+                const response = await fetch('api/autocomplete');
+                const result = await response.json();
+                setAutoApiKey(result);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    console.log('TST' + JSON.stringify(autoApiKey));
+
+    const [pickup, setPickup] = useState('');
+    const [destination, setDestination] = useState('');
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        pickup: '',
-        pickup_time: '',
-        destination: '',
-        destination_time: '',
+        pickup: pickup.value,
+        destination: destination.value,
         additional_info: '',
     });
 
@@ -60,46 +81,55 @@ export default function CustomerForm() {
                                 className="mt-1 p-2 border border-black rounded-md w-full"
                             />
                         </div>
-
-                        <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Pickup Location:</label>
-                            <input
-                                type="text"
-                                name="pickup"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border border-black rounded-md w-full"
-                            />
-                        </div>
                     </div>
 
                     <div className="w-full pl-4">
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Pickup Time:</label>
-                            <input
-                                type="text"
-                                name="pickup_time"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border border-black rounded-md w-full"
+                            <label className="block text-sm font-medium text-gray-700">Pickup Location:</label>
+                            <GooglePlacesAutocomplete
+                                selectProps={{
+                                    name: 'pickup',
+                                    //formData,
+                                    //onChange: value => handleChange(value, 'pickup'),
+                                    //onInputChange: value => handleChange(value),
+                                    pickup,
+                                    onChange: setPickup,
+                                    styles: {
+                                        control: provided => ({
+                                            ...provided,
+                                            borderColor: 'hsl(0, 0%, 0%)',
+                                            margin: '0.25rem',
+                                            padding: '0.1rem',
+                                            borderRadius: '0.375rem',
+                                            width: '100%',
+                                        }),
+                                    },
+                                }}
+                                apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
 
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700">Destination:</label>
-                            <input
-                                type="text"
-                                name="destination"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border border-black rounded-md w-full"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Destination Time:</label>
-                            <input
-                                type="text"
-                                name="destination_time"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border border-black rounded-md w-full"
+                            <GooglePlacesAutocomplete
+                                selectProps={{
+                                    name: 'destination',
+                                    //onChange: value => handleChange(value),
+                                    //onInputChange: value => handleChange(value),
+                                    destination,
+                                    onChange: setDestination,
+                                    styles: {
+                                        control: provided => ({
+                                            ...provided,
+                                            borderColor: 'hsl(0, 0%, 0%)',
+                                            margin: '0.25rem',
+                                            padding: '0.1rem',
+                                            borderRadius: '0.375rem',
+                                            width: '100%',
+                                        }),
+                                    },
+                                }}
+                                apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
                     </div>

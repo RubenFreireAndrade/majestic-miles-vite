@@ -24,11 +24,11 @@ async function sendEmail(body, context) {
         body: JSON.stringify({
             personalizations: [
                 {
-                    to: [{email: 'info.majesticmiles@gmail.com'}],
+                    to: [{email: context.env.GMAIL_USER}],
                     subject: `New query from ${body.phone}`,
                 },
             ],
-            from: {email: 'info.majesticmiles@gmail.com'},
+            from: {email: context.env.GMAIL_USER},
             content: [
                 {
                     type: 'text/plain',

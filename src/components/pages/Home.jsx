@@ -15,12 +15,15 @@ export default function Home() {
         <>
             <Carousel images={images} />
 
-            <section class="text-center">
-                THIS IS THE SECTION FOR WHAT MM IS SELLING. DO THIS BY DEMONSTRATING WHAT COMES WITH WHEN ORDERING
-                MAJESTIC MILES.
-            </section>
+            <section class="grid grid-cols-2 gap-10 mx-12 items-center">
+                <section class="text-center">
+                    <div class="text-[2rem]">YOUR PERSONAL CHAUFFEUR SERVICE</div>
+                    THIS IS THE SECTION FOR WHAT MM IS SELLING. DO THIS BY DEMONSTRATING WHAT COMES WITH WHEN ORDERING
+                    MAJESTIC MILES.
+                </section>
 
-            <CustomerForm />
+                <CustomerForm />
+            </section>
 
             <section class="text-center font-bold text-[2rem] border border-black p-4 bg-mm-black text-white">
                 Our Services
