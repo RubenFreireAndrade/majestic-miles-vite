@@ -14,6 +14,9 @@ export default function CustomerForm() {
         additional_info: '',
     });
 
+    formData.pickup = pickup.label;
+    formData.destination = destination.label;
+
     useEffect(() => {
         // Make a GET request when the component mounts
         const fetchData = async () => {
@@ -31,8 +34,6 @@ export default function CustomerForm() {
 
     const handleChange = e => {
         setFormData({...formData, [e.target.name]: e.target.value});
-        formData.pickup = pickup.label;
-        formData.destination = destination.label;
         console.log(formData);
     };
 
@@ -50,6 +51,7 @@ export default function CustomerForm() {
             });
 
             // Optionally, you can handle success or redirect the user
+            console.log(formData);
             console.log('Booking data sent to Cloudflare worker successfully');
         } catch (error) {
             console.error('Error sending booking data to Cloudflare worker:', error);
