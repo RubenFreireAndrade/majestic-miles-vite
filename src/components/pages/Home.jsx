@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {IoCarSportSharp} from 'react-icons/io5';
 
 import Carousel from '../layouts/Carousel';
@@ -15,26 +16,23 @@ export default function Home() {
         <>
             <Carousel images={images} />
 
-            <section class="grid grid-cols-2 gap-10 mx-12 items-center">
-                <section class="text-center">
-                    <div class="text-[2rem]">YOUR PERSONAL CHAUFFEUR SERVICE</div>
+            <section className="grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-12 items-center">
+                <section className="text-center">
+                    <div className="text-[2rem]">YOUR PERSONAL CHAUFFEUR SERVICE</div>
                     THIS IS THE SECTION FOR WHAT MM IS SELLING. DO THIS BY DEMONSTRATING WHAT COMES WITH WHEN ORDERING
                     MAJESTIC MILES.
                 </section>
-
                 <CustomerForm />
             </section>
 
-            <section class="text-center font-bold text-[2rem] border border-black p-4 bg-mm-black text-white">
-                Our Services
-            </section>
+            <section className="text-center font-bold text-[2rem] p-4 bg-mm-black text-white">Our Services</section>
 
-            <section class="grid grid-cols-2 gap-10 mx-12 mb-12 items-center">
-                <div class="flex flex-row">
-                    <IoCarSportSharp class="flex-shrink-0 mr-6" size={'3rem'} />
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-4 md:mx-12 mb-12 items-center">
+                <div className="flex flex-col md:flex-row">
+                    <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
                     <div>
-                        <h2 class="text-center font-bold">Transfers</h2>
-                        <div class="my-3">
+                        <h2 className="text-center font-bold">Transfers</h2>
+                        <div className="my-3">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -43,15 +41,17 @@ export default function Home() {
                             passages, and more recently with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
                         </div>
-                        <h2 class="text-blue-400">Read More</h2>
+                        <Link to={'/services'} className="text-blue-400">
+                            Read More
+                        </Link>
                     </div>
                 </div>
 
-                <div class="flex flex-row">
-                    <IoCarSportSharp class="flex-shrink-0 mr-6" size={'3rem'} />
+                <div className="flex flex-col md:flex-row md:mt-0">
+                    <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
                     <div>
-                        <h2 class="text-center font-bold">Hire</h2>
-                        <div class="my-3">
+                        <h2 className="text-center font-bold">Hire</h2>
+                        <div className="my-3">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -60,7 +60,9 @@ export default function Home() {
                             passages, and more recently with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
                         </div>
-                        <h2 class="text-blue-400">Read More</h2>
+                        <Link to={'/services'} className="text-blue-400">
+                            Read More
+                        </Link>
                     </div>
                 </div>
             </section>

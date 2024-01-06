@@ -60,7 +60,7 @@ export default function CustomerForm() {
 
     return (
         <>
-            <section className="text-center p-8">
+            <section className="text-center py-8 px-1 md:px-8">
                 <form onSubmit={handleSubmit} className="max-w-4xl mx-auto flex justify-between">
                     <div className="w-full pr-4">
                         <div className="mb-4">
@@ -90,9 +90,6 @@ export default function CustomerForm() {
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'pickup',
-                                    //formData,
-                                    //onChange: value => handleChange(value, 'pickup'),
-                                    //onInputChange: value => handleChange(value),
                                     pickup,
                                     onChange: setPickup,
                                     styles: {
@@ -114,8 +111,6 @@ export default function CustomerForm() {
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'destination',
-                                    //onChange: value => handleChange(value),
-                                    //onInputChange: value => handleChange(value),
                                     destination,
                                     onChange: setDestination,
                                     styles: {
@@ -135,12 +130,12 @@ export default function CustomerForm() {
                     </div>
                 </form>
 
-                <div className="text-center w-1/2 mx-auto mt-4">
+                <div className="text-center ml-[10%] mr-[10%] mt-4">
                     <label className="block text-sm font-medium text-gray-700">Additional Information:</label>
                     <textarea
                         name="additional_info"
                         onChange={handleChange}
-                        className="mt-1 p-2 border border-black rounded-md w-full"></textarea>
+                        className="mt-1 p-2 border border-black rounded-md w-full resize-none"></textarea>
                 </div>
 
                 <div className="text-center mt-4">
