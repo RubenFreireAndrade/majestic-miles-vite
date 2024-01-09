@@ -84,7 +84,7 @@ export default function CustomerForm() {
                         </div>
                     </div>
 
-                    <div className="w-full pl-4">
+                    <div className="w-full">
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700">Pickup Location:</label>
                             <GooglePlacesAutocomplete
@@ -96,7 +96,7 @@ export default function CustomerForm() {
                                         control: provided => ({
                                             ...provided,
                                             borderColor: 'hsl(0, 0%, 0%)',
-                                            margin: '0.25rem',
+                                            margin: '0.30rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',
@@ -117,7 +117,7 @@ export default function CustomerForm() {
                                         control: provided => ({
                                             ...provided,
                                             borderColor: 'hsl(0, 0%, 0%)',
-                                            margin: '0.25rem',
+                                            margin: '0.30rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',

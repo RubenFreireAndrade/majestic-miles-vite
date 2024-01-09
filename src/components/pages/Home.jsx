@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row">
                     <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
                     <div>
-                        <h2 className="text-center font-bold">Transfers</h2>
+                        <h2 className="text-center font-bold">One Way</h2>
                         <div className="my-3">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -50,15 +50,56 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row md:mt-0">
                     <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
                     <div>
-                        <h2 className="text-center font-bold">Hire</h2>
+                        <h2 className="text-center font-bold">Airports</h2>
                         <div className="my-3">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
+                            <h1>SIMPLE BY-THE-HOUR LUXURY JOURNEYS</h1>
+                            <p>IMMERSE YOURSELF IN A PREMIER WORLD OF ELEGANCE</p>
+                            <p>
+                                Embark on a journey where your dedicated chauffeur is ready to cater to your every need,
+                                from luggage assistance to insightful advice and beyond. Our transparent pricing ensures
+                                you remain in command, free from hidden costs. A tailor-made experience for every
+                                occasion, we are your mobile concierge, committed to making every moment extraordinary.
+                            </p>
+                        </div>
+                        <Link to={'/services'} className="text-blue-400">
+                            Read More
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row md:mt-0">
+                    <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
+                    <div>
+                        <h2 className="text-center font-bold">By The Hour</h2>
+                        <div className="my-3">
+                            <h1>SIMPLE BY-THE-HOUR LUXURY JOURNEYS</h1>
+                            <p>IMMERSE YOURSELF IN A PREMIER WORLD OF ELEGANCE</p>
+                            <p>
+                                Embark on a journey where your dedicated chauffeur is ready to cater to your every need,
+                                from luggage assistance to insightful advice and beyond. Our transparent pricing ensures
+                                you remain in command, free from hidden costs. A tailor-made experience for every
+                                occasion, we are your mobile concierge, committed to making every moment extraordinary.
+                            </p>
+                        </div>
+                        <Link to={'/services'} className="text-blue-400">
+                            Read More
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row md:mt-0">
+                    <IoCarSportSharp className="flex-shrink-0 w-full md:w-auto md:mr-6" size={'3rem'} />
+                    <div>
+                        <h2 className="text-center font-bold">Seaport Transfers</h2>
+                        <div className="my-3">
+                            <h1>SIMPLE BY-THE-HOUR LUXURY JOURNEYS</h1>
+                            <p>IMMERSE YOURSELF IN A PREMIER WORLD OF ELEGANCE</p>
+                            <p>
+                                Embark on a journey where your dedicated chauffeur is ready to cater to your every need,
+                                from luggage assistance to insightful advice and beyond. Our transparent pricing ensures
+                                you remain in command, free from hidden costs. A tailor-made experience for every
+                                occasion, we are your mobile concierge, committed to making every moment extraordinary.
+                            </p>
                         </div>
                         <Link to={'/services'} className="text-blue-400">
                             Read More
