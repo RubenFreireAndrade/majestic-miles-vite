@@ -60,11 +60,11 @@ export default function CustomerForm() {
 
     return (
         <>
-            <section className="text-center py-8 px-1 md:px-8">
-                <form onSubmit={handleSubmit} className="max-w-4xl mx-auto flex justify-between">
-                    <div className="w-full pr-4">
+            <section className="text-center py-8 px-1 md:py-4 md:px-4">
+                <form onSubmit={handleSubmit} className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between">
+                    <div className="w-full md:pr-4">
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Name:</label>
+                            <label className="block text-sm font-medium text-mm-black">Name:</label>
                             <input
                                 type="text"
                                 name="name"
@@ -74,7 +74,7 @@ export default function CustomerForm() {
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Phone:</label>
+                            <label className="block text-sm font-medium text-mm-black">Phone:</label>
                             <input
                                 type="tel"
                                 name="phone"
@@ -86,17 +86,18 @@ export default function CustomerForm() {
 
                     <div className="w-full">
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Pickup Location:</label>
+                            <label className="block text-sm font-medium text-mm-black">Pickup Location:</label>
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'pickup',
+                                    placeholder: 'Enter Location...',
                                     pickup,
                                     onChange: setPickup,
                                     styles: {
                                         control: provided => ({
                                             ...provided,
                                             borderColor: 'hsl(0, 0%, 0%)',
-                                            margin: '0.30rem',
+                                            marginTop: '0.25rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',
@@ -107,17 +108,18 @@ export default function CustomerForm() {
                             />
                         </div>
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700">Destination:</label>
+                            <label className="block text-sm font-medium text-mm-black">Destination:</label>
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'destination',
+                                    placeholder: 'Enter Location...',
                                     destination,
                                     onChange: setDestination,
                                     styles: {
                                         control: provided => ({
                                             ...provided,
                                             borderColor: 'hsl(0, 0%, 0%)',
-                                            margin: '0.30rem',
+                                            marginTop: '0.25rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',
@@ -131,7 +133,7 @@ export default function CustomerForm() {
                 </form>
 
                 <div className="text-center ml-[10%] mr-[10%] mt-4">
-                    <label className="block text-sm font-medium text-gray-700">Additional Information:</label>
+                    <label className="block text-sm font-medium text-mm-black">Additional Information:</label>
                     <textarea
                         name="additional_info"
                         onChange={handleChange}

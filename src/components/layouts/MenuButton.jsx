@@ -2,7 +2,7 @@ export default function MenuButton({toggleMenu, isMenuOpen}) {
     return (
         <button className="z-50 md:hidden" onClick={toggleMenu} aria-label="Toggle Menu">
             <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

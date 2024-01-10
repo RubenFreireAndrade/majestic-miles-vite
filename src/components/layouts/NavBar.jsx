@@ -50,7 +50,7 @@ export default function NavBar() {
                 zIndex: 40,
             }}>
             <div className="container mx-auto flex items-center justify-between md:justify-evenly">
-                <div className="ml-[10%]">
+                <div>
                     <Link to="/">
                         <img src={mmLogo} className="w-20 md:w-36" />
                     </Link>
@@ -74,7 +74,7 @@ export default function NavBar() {
 
                     <div className="flex flex-row justify-evenly font-bold text-[1.50rem]">
                         <>
-                            <Link className="mx-1 hover:bg-green-300" onClick={toggleServicesDropdown}>
+                            <Link className="mt-2 hover:bg-green-300" onClick={toggleServicesDropdown}>
                                 Services
                                 {isServicesDropdownOpen && (
                                     <div className="absolute bg-mm-black p-1">
@@ -94,11 +94,11 @@ export default function NavBar() {
                                 )}
                             </Link>
 
-                            <Link to={'/about'} className="mx-1 hover:bg-green-300">
+                            <Link to={'/about'} className="mt-2 hover:bg-green-300">
                                 About
                             </Link>
 
-                            <Link to={'/contact'} className="mx-1 hover:bg-green-300">
+                            <Link to={'/contact'} className="mt-2 hover:bg-green-300">
                                 Contact
                             </Link>
                         </>
@@ -125,43 +125,29 @@ export default function NavBar() {
                                 <span className="ml-4">info.majesticmiles@gmail.com</span>
                             </div>
 
-                            <hr className="border-solid border-white px-[30%] my-5"></hr>
+                            <hr className="relative border-solid border-white w-1/2 my-6"></hr>
 
                             <div>
-                                <div className="flex items-center">
-                                    <Link
-                                        className="block px-4 py-2 hover:bg-gray-200"
-                                        onClick={toggleServicesDropdown}>
-                                        Services
+                                <div className="flex">
+                                    <Link className="flex pb-2" onClick={toggleServicesDropdown}>
+                                        <span>Services</span>
+                                        {/* <IoIosArrowDown
+                                            className={`${isServicesDropdownOpen ? 'transform rotate-180' : ''}`}
+                                        /> */}
                                     </Link>
-                                    <IoIosArrowDown
-                                        className={`fixed right-36 ${isServicesDropdownOpen ? 'transform rotate-180' : ''}`}
-                                    />
                                 </div>
                                 {isServicesDropdownOpen && (
-                                    <div className="absolute  bg-mm-black">
-                                        <Link
-                                            to={'/oneway'}
-                                            className="block px-4 py-2 hover:bg-gray-200"
-                                            onClick={closeMenu}>
+                                    <div className="absolute bg-mm-black">
+                                        <Link to={'/oneway'} className="block px-4 py-2" onClick={closeMenu}>
                                             One Way
                                         </Link>
-                                        <Link
-                                            to={'/airports'}
-                                            className="block px-4 py-2 hover:bg-gray-200"
-                                            onClick={closeMenu}>
+                                        <Link to={'/airports'} className="block px-4 py-2" onClick={closeMenu}>
                                             Airports
                                         </Link>
-                                        <Link
-                                            to={'/bythehour'}
-                                            className="block px-4 py-2 hover:bg-gray-200"
-                                            onClick={closeMenu}>
+                                        <Link to={'/bythehour'} className="block px-4 py-2" onClick={closeMenu}>
                                             By The Hour
                                         </Link>
-                                        <Link
-                                            to={'/seaport'}
-                                            className="block px-4 py-2 hover:bg-gray-200"
-                                            onClick={closeMenu}>
+                                        <Link to={'/seaport'} className="block px-4 py-2" onClick={closeMenu}>
                                             Seaport Transfers
                                         </Link>
                                     </div>

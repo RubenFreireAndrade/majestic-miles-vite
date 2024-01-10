@@ -2,7 +2,6 @@ import './App.css';
 import {Route, Routes} from 'react-router-dom';
 
 import Home from './components/pages/Home';
-import Services from './components/pages/Services';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 
@@ -21,7 +20,6 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/* <Route path='/home' element={<Home />} /> */}
-                <Route path="/services" element={<Services />} />
                 <Route path="/oneway" element={<OneWay />} />
                 <Route path="/airports" element={<Airport />} />
                 <Route path="/bythehour" element={<ByTheHour />} />
