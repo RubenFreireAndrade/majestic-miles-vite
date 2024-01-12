@@ -1,27 +1,16 @@
 import {Link} from 'react-router-dom';
+import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
     return (
         <footer class="bg-mm-black text-white p-8">
-            <div class="container mx-auto flex justify-between">
+            <div class="flex justify-evenly items-center">
                 <div class="flex">
-                    <Link
-                        //to="/social-media-1"
-                        class="mr-4 hover:text-gray-500">
-                        Social Media 1
-                    </Link>
-                    <Link
-                        //to="/social-media-2"
-                        class="mr-4 hover:text-gray-500">
-                        Social Media 2
-                    </Link>
-                    <Link
-                        //to="/social-media-3"
-                        class="hover:text-gray-500">
-                        Social Media 3
-                    </Link>
+                    <SocialIcon url="https://www.instagram.com/majestic__miles/" network="tiktok" className="mx-1 md:mx-5"/>
+                    <SocialIcon url="https://www.instagram.com/majestic__miles/" network="instagram" className="mx-1 md:mx-5"/>
+                    <SocialIcon url="https://www.instagram.com/majestic__miles/" network="linkedin" className="mx-1 md:mx-5"/>
                 </div>
-                <div>&copy; 2023 Majestic Miles. All rights reserved.</div>
+                <div className="mx-2 md:mx-5">&copy; 2023 Majestic Miles. All rights reserved.</div>
             </div>
         </footer>
     );
