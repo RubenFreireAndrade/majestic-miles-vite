@@ -12,7 +12,7 @@ export default function Airport() {
                         <div className="text-lg text-white text-center">YOUR CHAUFFEUR MEETS & GREETS YOU</div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
-                        <CustomerForm />
+                        <CustomerForm setLabelColor={'text-black'} />
                     </div>
                 </div>
             </section>

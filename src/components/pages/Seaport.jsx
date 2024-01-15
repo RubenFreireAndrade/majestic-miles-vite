@@ -14,7 +14,7 @@ export default function SeaportTransfers() {
                         </div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
-                        <CustomerForm />
+                        <CustomerForm setLabelColor={'text-black'} />
                     </div>
                 </div>
             </section>
