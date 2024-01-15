@@ -4,8 +4,8 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-
 import Footer from './components/layouts/Footer';
+
 import NavBar from './components/layouts/NavBar';
 import OneWay from './components/pages/OneWay';
 import Airport from './components/pages/Airport';
@@ -19,7 +19,6 @@ export default function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* <Route path='/home' element={<Home />} /> */}
                 <Route path="/oneway" element={<OneWay />} />
                 <Route path="/airports" element={<Airport />} />
                 <Route path="/bythehour" element={<ByTheHour />} />

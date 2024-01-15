@@ -32,8 +32,9 @@ export default function Home() {
                     </section>
                     <CustomerForm setLabelColor={'text-white'} />
                 </section>
+            </section>
 
-                <section className="bg-white">
+            <section className="bg-white">
                     <div className="mx-[10%] py-10">
                         <section>
                             <div className="text-4xl text-center font-semibold">WELCOME TO MAJESTIC MILES</div>
@@ -96,7 +97,6 @@ export default function Home() {
                         </div>
                     ))}
                 </section>
-            </section>
         </>
     );
 }
