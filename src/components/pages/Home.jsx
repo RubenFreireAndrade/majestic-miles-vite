@@ -25,7 +25,7 @@ export default function Home() {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <section className="grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-12 pt-32 md:pt-40 items-center">
                     <section className="text-center">
-                        <div className="text-6xl text-white font-sans">YOUR PERSONAL CHAUFFEUR SERVICE</div>
+                        <div className="text-6xl text-white">YOUR PERSONAL CHAUFFEUR SERVICE</div>
                         <div className="text-lg text-white">
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
@@ -33,16 +33,16 @@ export default function Home() {
                     <CustomerForm setLabelColor={'text-white'} />
                 </section>
 
-                <section className="bg-white font-sans">
+                <section className="bg-white">
                     <div className="mx-[10%] py-10">
                         <section>
-                            <div className="text-4xl text-center font-medium">WELCOME TO MAJESTIC MILES</div>
+                            <div className="text-4xl text-center font-semibold">WELCOME TO MAJESTIC MILES</div>
                         </section>
 
-                        <hr className="relative border-solid border-black my-6 md:mx-[5%]"></hr>
+                        <hr className="relative border-solid border-black my-6 md:mx-[25%]"></hr>
 
                         <section className="md:mx-[8%]">
-                            <div className="text-3xl text-center font-medium">Where luxury meets reliability</div>
+                            <div className="text-3xl text-center font-semibold">Where luxury meets reliability</div>
                             <div className="my-2">
                                 At Majestic Miles, we take pride in providing an unparalleled travel experience that
                                 combines comfort, professionalism, and a touch of elegance.
@@ -55,8 +55,8 @@ export default function Home() {
                             </div>
                         </section>
 
-                        <section className="md:mx-[8%]">
-                            <div className="text-3xl text-center font-medium">Why choose Majestic Miles?</div>
+                        <section className="md:mx-[8%] mt-10">
+                            <div className="text-3xl text-center font-semibold">Why choose Majestic Miles</div>
                             <li className="my-2">
                                 <b>Experienced Chauffeurs:</b> Our team of skilled and courteous chauffeurs is
                                 handpicked for their professionalism, knowledge, and dedication to providing an
@@ -77,9 +77,9 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="text-center text-4xl p-4 bg-mm-black text-white font-sans">
+                <section className="text-center text-4xl p-4 bg-mm-black text-white font-semibold">
                     OUR SERVICES
-                    <hr className="relative border-solid border-white my-6 mx-[8%] md:mx-[5%]"></hr>
+                    <hr className="relative border-solid border-white my-6 mx-[8%] md:mx-[40%]"></hr>
                 </section>
 
                 <section className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4 px-10 pb-10 md:p-1 md:px-20 bg-mm-black">
@@ -90,7 +90,7 @@ export default function Home() {
                             <Link to={service.link}>
                                 <img className="w-full h-48 object-cover" src={service.image} alt={service.name} />
                                 <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">{service.name}</div>
+                                    <div className="font-semibold text-xl mb-2">{service.name}</div>
                                 </div>
                             </Link>
                         </div>
