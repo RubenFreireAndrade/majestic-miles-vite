@@ -60,33 +60,33 @@ export default function CustomerForm({setLabelColor}) {
 
     return (
         <>
-            <section className="text-center py-8 px-1 md:py-4 md:px-4">
-                <form onSubmit={handleSubmit} className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between">
+            <section className="m-2 md:m-1 md:py-5 md:px-5">
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col md:flex-row justify-between">
                     <div className="w-full md:pr-4">
                         <div className="mb-4">
-                            <label className={`block text-base font-normal ${setLabelColor}`}>Name:</label>
+                            <label className={`block text-sm font-bold ${setLabelColor}`}>Name</label>
                             <input
                                 type="text"
                                 name="name"
                                 onChange={handleChange}
-                                className="mt-1 p-2 border border-mm-black rounded-md w-full"
+                                className="mt-1 p-2 border rounded-md w-full border-stone-300 focus:outline-none focus:border-black"
                             />
                         </div>
 
                         <div className="mb-4">
-                            <label className={`block text-base font-normal ${setLabelColor}`}>Phone:</label>
+                            <label className={`block text-sm font-bold ${setLabelColor}`}>Phone</label>
                             <input
                                 type="tel"
                                 name="phone"
                                 onChange={handleChange}
-                                className="mt-1 p-2 border border-mm-black rounded-md w-full"
+                                className="mt-1 p-2 border rounded-md w-full border-stone-300 focus:outline-none focus:border-black"
                             />
                         </div>
                     </div>
 
                     <div className="w-full">
                         <div className="mb-4">
-                            <label className={`block text-base font-normal ${setLabelColor}`}>Pickup Location:</label>
+                            <label className={`block text-sm font-bold ${setLabelColor}`}>Pickup Location</label>
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'pickup',
@@ -96,19 +96,20 @@ export default function CustomerForm({setLabelColor}) {
                                     styles: {
                                         control: provided => ({
                                             ...provided,
-                                            borderColor: 'hsl(0, 0%, 0%)',
+                                            borderColor: 'rgb(214 211 209)',
                                             marginTop: '0.25rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',
                                         }),
+                                        indicatorsContainer: provided => ({}),
                                     },
                                 }}
                                 apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
                         <div className="mb-4">
-                            <label className={`block text-base font-normal ${setLabelColor}`}>Destination:</label>
+                            <label className={`block text-sm font-bold ${setLabelColor}`}>Destination</label>
                             <GooglePlacesAutocomplete
                                 selectProps={{
                                     name: 'destination',
@@ -116,14 +117,15 @@ export default function CustomerForm({setLabelColor}) {
                                     destination,
                                     onChange: setDestination,
                                     styles: {
-                                        control: provided => ({
+                                        control: (provided, state) => ({
                                             ...provided,
-                                            borderColor: 'hsl(0, 0%, 0%)',
+                                            borderColor: 'rgb(214 211 209)',
                                             marginTop: '0.25rem',
                                             padding: '0.1rem',
                                             borderRadius: '0.375rem',
                                             width: '100%',
                                         }),
+                                        indicatorsContainer: provided => ({}),
                                     },
                                 }}
                                 apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
@@ -132,18 +134,18 @@ export default function CustomerForm({setLabelColor}) {
                     </div>
                 </form>
 
-                <div className="text-center ml-[10%] mr-[10%] mt-4">
-                    <label className={`block text-base font-normal ${setLabelColor}`}>Additional Information:</label>
+                <div>
+                    <label className={`block text-sm font-bold ${setLabelColor}`}>Additional Information</label>
                     <textarea
                         name="additional_info"
                         onChange={handleChange}
-                        className="mt-1 p-2 border border-mm-black rounded-md w-full resize-none"></textarea>
+                        className="mt-1 p-2 border rounded-md w-full border-stone-300 resize-none focus:outline-none focus:border-black"></textarea>
                 </div>
 
                 <div className="text-center mt-4">
                     <button
                         type="submit"
-                        className="bg-mm-black text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+                        className="w-full bg-mm-black text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
                         onClick={handleSubmit}>
                         Submit
                     </button>

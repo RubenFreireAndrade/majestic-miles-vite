@@ -1,5 +1,5 @@
 import mercLogo from '../../assets/mercLogo.jpg';
-
+import ContactForm from '../layouts/ContactForm';
 import CustomerForm from '../layouts/CustomerForm';
 
 export default function OneWay() {
@@ -7,17 +7,58 @@ export default function OneWay() {
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
-                    <div className="flex flex-col mb-12 items-center md:items-start">
-                        <div className="text-6xl text-white text-center">ONE WAY JOURNEYS</div>
-                        <div className="text-lg text-white text-center">SIMPLE TRANSPORT FROM ONE POINT TO ANOTHER</div>
+                    <div className="flex flex-col mb-12 items-center text-center">
+                        <div className="text-6xl text-white">ONE WAY JOURNEYS</div>
+                        <div className="text-lg text-white">SIMPLE TRANSPORT FROM ONE POINT TO ANOTHER</div>
                     </div>
-                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
-                        <CustomerForm setLabelColor={'text-black'} />
+                    <div className="bg-white rounded-lg shadow-lg mb-12 mx-2 p-4 md:p-0">
+                        <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>
             </section>
 
-            <section></section>
+            <section className="mx-[10%] md:mx-[15%] my-5">
+                <section>
+                    <div className="text-3xl text-center font-semibold">STRAIGHTFORWARD RIDE PACKAGE</div>
+                </section>
+
+                <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
+
+                <section>
+                    {/* <div className="text-3xl text-center font-semibold">DONT KNOW YET</div> */}
+                    <div className="my-2">
+                        At Majestic Miles, we understand that a single journey can be just as significant as the
+                        destination. Our One Way journeys are designed to offer you convenience, comfort, and a touch of
+                        luxury.
+                    </div>
+                    <div className="my-2">
+                        Our One Way service is tailored to your needs. Whether it's a ride to the airport, a business
+                        meeting, or a special event, we ensure your journey is smooth and personalized.
+                    </div>
+                    <div className="my-2">
+                        With Majestic Miles, what you see is what you pay. Our transparent pricing ensures that you know
+                        the cost upfront, without any hidden fees. Take control of your budget and enjoy peace of mind.
+                    </div>
+                    {/* <div className="my-2">
+                        A top-notch chauffeur service made for today's explorer. We pay attention to the little things
+                        and offer transparent pricing with no surprises. Your chauffeur is committed to making your trip
+                        exceptional and going beyond what you expect.
+                    </div> */}
+                </section>
+            </section>
+
+            <section className="p-5 bg-mm-black">
+                <div className="text-3xl text-center text-white font-semibold">LOOKING FOR SOMETHING SPECIFIC?</div>
+                <div className="text-xl text-center text-white">
+                    Submit an enquiry and we will be with you soon as possible
+                </div>
+
+                <hr className="relative border-solid border-white my-6 md:mx-[20%]"></hr>
+
+                <div>
+                    <ContactForm />
+                </div>
+            </section>
         </>
     );
 }

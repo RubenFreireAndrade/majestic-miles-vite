@@ -60,12 +60,12 @@ export default function NavBar() {
                     <div className="flex flex-col md:flex-row">
                         <div className="flex flex-row">
                             <BsFillTelephoneFill className="md:ml-4" />
-                            <span className="mx-2 hover:bg-green-300">90123908981</span>
+                            <span className="mx-2">90123908981</span>
                         </div>
                         <div className="flex flex-row">
                             <AiOutlineMail className="md:ml-4" />
                             <span>
-                                <a href="mailto:info.majesticmiles@gmail.com" className="mx-2 hover:bg-green-300">
+                                <a href="mailto:info.majesticmiles@gmail.com" className="mx-2">
                                     info.majesticmiles@gmail.com
                                 </a>
                             </span>
@@ -74,7 +74,7 @@ export default function NavBar() {
 
                     <div className="flex flex-row justify-evenly font-bold text-[1.50rem]">
                         <>
-                            <Link className="mt-2 hover:bg-green-300" onClick={toggleServicesDropdown}>
+                            <Link className="mt-2" onClick={toggleServicesDropdown}>
                                 Services
                                 {isServicesDropdownOpen && (
                                     <div className="absolute bg-mm-black p-1">
@@ -94,11 +94,11 @@ export default function NavBar() {
                                 )}
                             </Link>
 
-                            <Link to={'/about'} className="mt-2 hover:bg-green-300">
+                            <Link to={'/about'} className="mt-2">
                                 About
                             </Link>
 
-                            <Link to={'/contact'} className="mt-2 hover:bg-green-300">
+                            <Link to={'/contact'} className="mt-2">
                                 Contact
                             </Link>
                         </>
