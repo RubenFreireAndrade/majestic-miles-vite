@@ -22,7 +22,7 @@ export default function App() {
                 <Route path="/oneway" element={<OneWay />} />
                 <Route path="/airports" element={<Airport />} />
                 <Route path="/bythehour" element={<ByTheHour />} />
-                <Route path="/seaport" element={<SeaportTransfers />} />
+                <Route path="/seaports" element={<SeaportTransfers />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

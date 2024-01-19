@@ -23,8 +23,10 @@ export default function Home() {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className="text-6xl text-white">YOUR PERSONAL CHAUFFEUR SERVICE</div>
-                        <div className="text-lg text-white">
+                        <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                            YOUR PERSONAL CHAUFFEUR SERVICE
+                        </div>
+                        <div className="text-lg text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
                     </div>

@@ -9,8 +9,12 @@ export default function OneWay() {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${handOnCar})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className="text-6xl text-white">ONE WAY JOURNEYS</div>
-                        <div className="text-lg text-white">SIMPLE TRANSPORT FROM ONE POINT TO ANOTHER</div>
+                        <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                            ONE WAY JOURNEYS
+                        </div>
+                        <div className="text-lg text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                            SIMPLE TRANSPORT FROM ONE POINT TO ANOTHER
+                        </div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
                         <CustomerForm setLabelColor={'text-mm-black'} />

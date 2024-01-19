@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {AiOutlineMail} from 'react-icons/ai';
 import {IoIosArrowDown} from 'react-icons/io';
 import {BsFillTelephoneFill} from 'react-icons/bs';
+import {GrMail} from 'react-icons/gr';
 
 import MenuButton from './MenuButton';
 import mmLogo from '../../assets/mmLogo.svg';
@@ -52,53 +53,85 @@ export default function NavBar() {
             <div className="container mx-auto flex items-center justify-between md:justify-evenly">
                 <div>
                     <Link to="/">
-                        <img src={mmLogo} className="w-20 md:w-36" />
+                        <img
+                            src={mmLogo}
+                            className="w-20 md:w-52"
+                            style={{'stroke-width': '0.02rem', stroke: 'rgb(30, 30, 30)'}}
+                        />
                     </Link>
                 </div>
 
                 <div className="hidden md:flex md:flex-col font-bold text-[1rem]">
                     <div className="flex flex-col md:flex-row">
                         <div className="flex flex-row">
-                            <BsFillTelephoneFill className="md:ml-4" />
-                            <span className="mx-2">90123908981</span>
+                            <BsFillTelephoneFill
+                                className="md:ml-4"
+                                style={{'stroke-width': '0.02rem', stroke: 'rgb(30, 30, 30)'}}
+                                size="1.5rem"
+                            />
+                            <span className="mx-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                                90123908981
+                            </span>
                         </div>
                         <div className="flex flex-row">
-                            <AiOutlineMail className="md:ml-4" />
+                            <GrMail
+                                className="md:ml-4"
+                                style={{'stroke-width': '0.02rem', stroke: 'rgb(30, 30, 30)'}}
+                                size="1.5rem"
+                            />
                             <span>
-                                <a href="mailto:info.majesticmiles@gmail.com" className="mx-2">
+                                <a
+                                    href="mailto:info.majesticmiles@gmail.com"
+                                    className="mx-2"
+                                    style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                     info.majesticmiles@gmail.com
                                 </a>
                             </span>
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-evenly font-bold text-[1.50rem]">
+                    <div className="flex flex-row justify-evenly text-[1.50rem]">
                         <>
-                            <Link className="mt-2" onClick={toggleServicesDropdown}>
+                            <Link
+                                className="mt-2"
+                                style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}
+                                onClick={toggleServicesDropdown}>
                                 Services
                                 {isServicesDropdownOpen && (
                                     <div className="absolute bg-mm-black p-1">
-                                        <Link to={'/oneway'} className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link
+                                            to={'/oneway'}
+                                            className="block px-4 py-2 hover:bg-gray-200"
+                                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                             One Way
                                         </Link>
-                                        <Link to={'/airports'} className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link
+                                            to={'/airports'}
+                                            className="block px-4 py-2 hover:bg-gray-200"
+                                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                             Airports
                                         </Link>
-                                        <Link to={'/bythehour'} className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link
+                                            to={'/bythehour'}
+                                            className="block px-4 py-2 hover:bg-gray-200"
+                                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                             By The Hour
                                         </Link>
-                                        <Link to={'/seaport'} className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link
+                                            to={'/seaports'}
+                                            className="block px-4 py-2 hover:bg-gray-200"
+                                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                             Seaport Transfers
                                         </Link>
                                     </div>
                                 )}
                             </Link>
 
-                            <Link to={'/about'} className="mt-2">
+                            <Link to={'/about'} className="mt-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                 About
                             </Link>
 
-                            <Link to={'/contact'} className="mt-2">
+                            <Link to={'/contact'} className="mt-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                 Contact
                             </Link>
                         </>
@@ -147,7 +180,7 @@ export default function NavBar() {
                                         <Link to={'/bythehour'} className="block px-4 py-2" onClick={closeMenu}>
                                             By The Hour
                                         </Link>
-                                        <Link to={'/seaport'} className="block px-4 py-2" onClick={closeMenu}>
+                                        <Link to={'/seaports'} className="block px-4 py-2" onClick={closeMenu}>
                                             Seaport Transfers
                                         </Link>
                                     </div>

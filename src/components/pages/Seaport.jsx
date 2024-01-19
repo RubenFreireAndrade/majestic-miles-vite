@@ -6,14 +6,18 @@ import seaport from '../../assets/seaport.jpg';
 export default function SeaportTransfers() {
     return (
         <>
-            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
+            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${seaport})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className="text-6xl text-white">SEAPORT TRANSFERS</div>
-                        <div className="text-lg text-white">START OR FINISH YOUR JOURNEY WITH A COMFORTABLE RIDE</div>
+                        <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                            SEAPORT TRANSFERS
+                        </div>
+                        <div className="text-lg text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                            START OR FINISH YOUR JOURNEY WITH A COMFORTABLE RIDE
+                        </div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
-                        <CustomerForm setLabelColor={'text-black'} />
+                        <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>
             </section>
