@@ -1,18 +1,18 @@
-import mercLogo from '../../assets/mercLogo.jpg';
-
-import CustomerForm from '../layouts/CustomerForm';
 import ContactForm from '../layouts/ContactForm';
+import CustomerForm from '../layouts/CustomerForm';
+
+import heathrowTerm3 from '../../assets/heathrowTerm3.jpg';
 
 export default function Airport() {
     return (
         <>
-            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
+            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${heathrowTerm3})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
                         <div className="text-6xl text-white">AIRPORT TRANSFERS</div>
                         <div className="text-lg text-white">YOUR CHAUFFEUR MEETS & GREETS YOU</div>
                     </div>
-                    <div className="bg-white rounded-lg shadow-lg mb-12 mx-2 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
                         <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>

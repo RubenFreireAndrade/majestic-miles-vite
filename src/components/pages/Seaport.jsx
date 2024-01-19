@@ -1,6 +1,7 @@
-import mercLogo from '../../assets/mercLogo.jpg';
 import ContactForm from '../layouts/ContactForm';
 import CustomerForm from '../layouts/CustomerForm';
+
+import seaport from '../../assets/seaport.jpg';
 
 export default function SeaportTransfers() {
     return (
@@ -11,7 +12,7 @@ export default function SeaportTransfers() {
                         <div className="text-6xl text-white">SEAPORT TRANSFERS</div>
                         <div className="text-lg text-white">START OR FINISH YOUR JOURNEY WITH A COMFORTABLE RIDE</div>
                     </div>
-                    <div className="bg-white rounded-lg shadow-lg mb-12 mx-2 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
                         <CustomerForm setLabelColor={'text-black'} />
                     </div>
                 </div>

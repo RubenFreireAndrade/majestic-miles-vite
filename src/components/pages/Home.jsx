@@ -4,19 +4,18 @@ import {IoCarSportSharp} from 'react-icons/io5';
 import Carousel from '../layouts/Carousel';
 import CustomerForm from '../layouts/CustomerForm';
 
-import frontMerc from '../../assets/FrontMerc.jpg';
+import seaport from '../../assets/seaport.jpg';
 import mercLogo from '../../assets/mercLogo.jpg';
+import handOnCar from '../../assets/handOnCar2.jpg';
+import heathrow from '../../assets/heathrowTerm3.jpg';
 import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
-import frontMercBlack from '../../assets/FrontMercBlack.jpg';
-import frontMercBlackTrans from '../../assets/MercBlackCar2.png';
 
 export default function Home() {
-    const images = [frontMercBlackTrans, frontMercBlack];
     const services = [
-        {name: 'One Way', image: frontMercBlackTrans, link: '/oneway'},
-        {name: 'Airport Transfers', image: frontMercBlack, link: '/airports'},
+        {name: 'One Way', image: handOnCar, link: '/oneway'},
+        {name: 'Airport Transfers', image: heathrow, link: '/airports'},
         {name: 'By The Hour', image: sideFrontMerc, link: '/bythehour'},
-        {name: 'Seaport Transfers', image: sideFrontMerc, link: '/seaports'},
+        {name: 'Seaport Transfers', image: seaport, link: '/seaports'},
     ];
 
     return (
@@ -91,7 +90,12 @@ export default function Home() {
                         <Link to={service.link}>
                             <img className="w-full h-48 object-cover" src={service.image} alt={service.name} />
                             <div className="px-6 py-4">
-                                <div className="font-semibold text-xl mb-2">{service.name}</div>
+                                <div className="font-semibold text-xl mb-2">
+                                    {service.name}{' '}
+                                    <span className="text-xl" role="img" aria-label="right-arrow">
+                                        &#10132;
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     </div>
