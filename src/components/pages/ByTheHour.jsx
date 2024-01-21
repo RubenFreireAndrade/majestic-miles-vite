@@ -24,18 +24,23 @@ export default function ByTheHour() {
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className="text-4xl text-center font-semibold">BY THE HOUR</div>
+                    <div className="text-4xl text-center font-semibold">DISCOVER THE CITY YOUR WAY</div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
 
                 <section>
-                    <div className="text-3xl text-center font-semibold">SIMPLE BY THE HOUR LUXURY JOURNEYS</div>
+                    {/* <div className="text-3xl text-center font-semibold">DISCOVER THE CITY YOUR WAY WITH: BY THE HOUR</div> */}
                     <div className="my-2">
                         Embark on a journey where your dedicated chauffeur is ready to cater to your every need, from
                         luggage assistance to insightful advice and beyond. Our transparent pricing ensures you remain
                         in command, free from hidden costs. A tailor-made experience for every occasion, we are your
                         mobile concierge, committed to making every moment extraordinary.
+                    </div>
+                    <div className="my-2">
+                        Unleash the freedom to explore at your own pace with "By The Hour" chauffeur service. Tailored
+                        for those who value flexibility and personalized experiences, our service is designed to put you
+                        in control of your journey.
                     </div>
                 </section>
             </section>

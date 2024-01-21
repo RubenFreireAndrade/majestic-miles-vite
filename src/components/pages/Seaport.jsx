@@ -24,17 +24,25 @@ export default function SeaportTransfers() {
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className="text-4xl text-center font-semibold">SEAPORT</div>
+                    <div className="text-4xl text-center font-semibold">EMBARK IN STYLE, DISEMBARK WITH GRACE</div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
 
                 <section>
-                    <div className="text-3xl text-center font-semibold">EXCEPTIONAL, SAFE MEET AND GREET</div>
+                    {/* <div className="text-3xl text-center font-semibold">EXCEPTIONAL, SAFE MEET AND GREET</div> */}
                     <div className="my-2">
-                        Your chauffeur will be waiting in the arrivals hall with your name board. They will then help
-                        with your bags before walking you to your vehicle. Your personal chauffeur will be on hand as
-                        butler, concierge, porter and personal assistant on wheels.
+                        Prepare to set sail with tranquility and style. Our dedicated Seaport Transfer service is
+                        crafted to ensure your transition to or from the port is as effortless as a gentle sea breeze.
+                    </div>
+                    {/* <div className="my-2">
+                        Embark on your cruise adventure or conclude it with ease. Our chauffeurs are committed to
+                        punctuality, ensuring you board your ship on time or are promptly greeted upon disembarking.
+                    </div> */}
+                    <div>
+                        For arrivals, our chauffeurs extend a harbor welcome, meeting you inside the terminal. Allow us
+                        to guide you from the port to your awaiting vehicle, ensuring a seamless transition to your next
+                        destination. Look for our sign, and let the voyage begin on a high note.
                     </div>
                 </section>
             </section>

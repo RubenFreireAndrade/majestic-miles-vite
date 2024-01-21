@@ -15,9 +15,24 @@ export default function ContactForm() {
         }));
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
-        // Add your form submission logic here
+        try {
+            // Send data to the Cloudflare worker endpoint
+            await fetch('/api/sendquery', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Optionally, you can handle success or redirect the user
+            console.log(formData);
+            console.log('Booking data sent to Cloudflare worker successfully');
+        } catch (error) {
+            console.error('Error sending booking data to Cloudflare worker:', error);
+        }
         console.log('Form submitted:', formData);
     };
 

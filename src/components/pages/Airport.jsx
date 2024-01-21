@@ -24,17 +24,28 @@ export default function Airport() {
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className="text-4xl text-center font-semibold">AIRPORT</div>
+                    <div className="text-4xl text-center font-semibold">ELEVATE YOUR EXPERIENCE</div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
 
                 <section>
-                    <div className="text-3xl text-center font-semibold">EXCEPTIONAL, SAFE MEET AND GREET</div>
+                    {/* <div className="text-3xl text-center font-semibold">ELEVATE YOUR EXPERIENCE</div> */}
                     <div className="my-2">
-                        Your chauffeur will be waiting in the arrivals hall with your name board. They will then help
+                        Whether you're jetting off or returning home, make your airport journey stress-free with
+                        Majestic Miles. Our dedicated airport transfer service is designed to provide you with a smooth
+                        and comfortable ride, ensuring you start or end your trip on a high note.
+                        {/* Your chauffeur will be waiting in the arrivals hall with your name board. They will then help
                         with your bags before walking you to your vehicle. Your personal chauffeur will be on hand as
-                        butler, concierge, porter and personal assistant on wheels.
+                        butler, concierge, porter and personal assistant on wheels. */}
+                    </div>
+                    <div className="my-2">
+                        Say goodbye to unexpected costs. Our airport transfer service comes with fixed and transparent
+                        pricing, allowing you to budget confidently without worrying about hidden fees.
+                    </div>
+                    <div className="my-2">
+                        For arrivals, our chauffeurs can meet you inside the airport and are here to assist with your
+                        luggage ensuring a smooth transition from the terminal to your vehicle.
                     </div>
                 </section>
             </section>

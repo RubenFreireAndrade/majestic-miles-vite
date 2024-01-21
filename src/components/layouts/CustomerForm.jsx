@@ -42,7 +42,7 @@ export default function CustomerForm({setLabelColor}) {
 
         try {
             // Send data to the Cloudflare worker endpoint
-            await fetch('/api/sendmail', {
+            await fetch('/api/sendjob', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
