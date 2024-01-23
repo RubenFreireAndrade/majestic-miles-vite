@@ -35,7 +35,7 @@ async function sendEmail(body, context) {
                     value: `New Contact Submission From: ${body.email}
                 
                 Name: ${body.name}
-                Phone: ${body.phone}
+                Email: ${body.email}
                 Message: ${body.message}`,
                 },
             ],

@@ -34,11 +34,11 @@ async function sendEmail(body, context) {
                     type: 'text/plain',
                     value: `New Job Query From ${body.phone}
                 
-                <div> Name: ${body.name} </div>
-                <div> Phone: ${body.phone} </div>
-                <div> Email: ${body.email} </div>
-                <div> Destination: ${body.destination} </div>
-                <div> Additional Info: ${body.additional_info} </div>`,
+                Name: ${body.name}
+                Phone: ${body.phone}
+                Email: ${body.email}
+                Destination: ${body.destination}
+                Additional Info: ${body.additional_info}`,
                 },
             ],
         }),
