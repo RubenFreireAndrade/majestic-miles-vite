@@ -30,7 +30,7 @@ export default function Home() {
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
                     </div>
-                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
                         <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>

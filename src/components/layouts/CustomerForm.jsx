@@ -2,20 +2,14 @@ import {useEffect, useRef, useState} from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 export default function CustomerForm({setLabelColor}) {
-    const [pickup, setPickup] = useState('');
-    const [destination, setDestination] = useState('');
+    const [pickup, setPickup] = useState(null);
+    const [destination, setDestination] = useState(null);
     const [autoApiKey, setAutoApiKey] = useState('');
 
     const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
         pickup: '',
         destination: '',
-        additional_info: '',
     });
-
-    formData.pickup = pickup.label;
-    formData.destination = destination.label;
 
     useEffect(() => {
         // Make a GET request when the component mounts
@@ -32,67 +26,38 @@ export default function CustomerForm({setLabelColor}) {
         fetchData();
     }, []);
 
-    const handleChange = e => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-        console.log(formData);
+    const isFormValid = () => {
+        return formData.pickup.trim() !== '' && formData.destination.trim() !== '';
     };
 
     const handleSubmit = async e => {
         e.preventDefault();
+        if (pickup?.label !== undefined) formData.pickup = pickup.label;
+        if (destination?.label !== undefined) formData.destination = destination.label;
 
-        try {
-            // Send data to the Cloudflare worker endpoint
-            await fetch('/api/sendjob', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            // Optionally, you can handle success or redirect the user
-            console.log(formData);
-            console.log('Booking data sent to Cloudflare worker successfully');
-        } catch (error) {
-            console.error('Error sending booking data to Cloudflare worker:', error);
-        }
+        if (isFormValid()) {
+            // Switch page to booking page
+            console.log('Form submitted:', formData);
+        } else alert('Please fill in all the fields before submitting the form.');
     };
 
     return (
         <>
-            <section className="m-2 md:m-1 md:py-5 md:px-5">
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col md:flex-row justify-between">
-                    <div className="w-full md:pr-4">
-                        <div className="mb-4">
-                            <label className={`block text-sm font-bold ${setLabelColor}`}>Name</label>
-                            <input
-                                type="text"
-                                name="name"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border rounded-md w-full border-stone-300 focus:outline-none focus:border-black"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className={`block text-sm font-bold ${setLabelColor}`}>Phone</label>
-                            <input
-                                type="tel"
-                                name="phone"
-                                onChange={handleChange}
-                                className="mt-1 p-2 border rounded-md w-full border-stone-300 focus:outline-none focus:border-black"
-                            />
-                        </div>
-                    </div>
-
+            <section className="p-5">
+                <div className="text-center text-2xl">Where to?</div>
+                <form onSubmit={handleSubmit} className="mx-auto flex flex-col md:flex-row pt-3">
                     <div className="w-full">
                         <div className="mb-4">
                             <label className={`block text-sm font-bold ${setLabelColor}`}>Pickup Location</label>
                             <GooglePlacesAutocomplete
+                                debounce={1000}
                                 selectProps={{
                                     name: 'pickup',
                                     placeholder: 'Enter Location...',
                                     pickup,
                                     onChange: setPickup,
+                                    //required: true,
+                                    value: pickup,
                                     styles: {
                                         control: provided => ({
                                             ...provided,
@@ -111,11 +76,14 @@ export default function CustomerForm({setLabelColor}) {
                         <div className="mb-4">
                             <label className={`block text-sm font-bold ${setLabelColor}`}>Destination</label>
                             <GooglePlacesAutocomplete
+                                debounce={1000}
                                 selectProps={{
                                     name: 'destination',
                                     placeholder: 'Enter Location...',
                                     destination,
                                     onChange: setDestination,
+                                    //required: true,
+                                    value: destination,
                                     styles: {
                                         control: (provided, state) => ({
                                             ...provided,
@@ -131,25 +99,16 @@ export default function CustomerForm({setLabelColor}) {
                                 apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
+                        <div className="text-center mt-4">
+                            <button
+                                type="submit"
+                                className="w-full bg-mm-black text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+                                onClick={handleSubmit}>
+                                Get Quote
+                            </button>
+                        </div>
                     </div>
                 </form>
-
-                <div>
-                    <label className={`block text-sm font-bold ${setLabelColor}`}>Additional Information</label>
-                    <textarea
-                        name="additional_info"
-                        onChange={handleChange}
-                        className="mt-1 p-2 border rounded-md w-full border-stone-300 resize-none focus:outline-none focus:border-black"></textarea>
-                </div>
-
-                <div className="text-center mt-4">
-                    <button
-                        type="submit"
-                        className="w-full bg-mm-black text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-                        onClick={handleSubmit}>
-                        Submit
-                    </button>
-                </div>
             </section>
         </>
     );
