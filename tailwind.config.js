@@ -7,6 +7,9 @@ export default {
                 'mm-black': '#1E1E1E',
             },
         },
+        fontFamily: {
+            jost: ['Jost', 'sans-serif'],
+        }
     },
     plugins: [],
 };

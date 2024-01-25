@@ -15,19 +15,19 @@ import SeaportTransfers from './components/pages/Seaport';
 export default function App() {
     return (
         <>
-            <NavBar />
+            <NavBar setFont={'font-jost'} />
 
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/oneway" element={<OneWay />} />
-                <Route path="/airports" element={<Airport />} />
-                <Route path="/bythehour" element={<ByTheHour />} />
-                <Route path="/seaports" element={<SeaportTransfers />} />
+                <Route path="/" element={<Home setFont={'font-jost'} />} />
+                <Route path="/oneway" element={<OneWay setFont={'font-jost'} />} />
+                <Route path="/airports" element={<Airport setFont={'font-jost'} />} />
+                <Route path="/bythehour" element={<ByTheHour setFont={'font-jost'} />} />
+                <Route path="/seaports" element={<SeaportTransfers setFont={'font-jost'} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
 
-            <Footer />
+            <Footer setFont={'font-jost'} />
         </>
     );
 }

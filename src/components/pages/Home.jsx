@@ -10,7 +10,7 @@ import handOnCar from '../../assets/handOnCar2.jpg';
 import heathrow from '../../assets/heathrowTerm3.jpg';
 import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
 
-export default function Home() {
+export default function Home({setFont}) {
     const services = [
         {name: 'One Way', image: handOnCar, link: '/oneway'},
         {name: 'Airport Transfers', image: heathrow, link: '/airports'},
@@ -23,28 +23,28 @@ export default function Home() {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div className={`text-6xl text-white ${setFont}`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             YOUR PERSONAL CHAUFFEUR SERVICE
                         </div>
-                        <div className="text-lg text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div className={`text-lg text-white ${setFont}`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
-                        <CustomerForm setLabelColor={'text-mm-black'} />
+                        <CustomerForm setLabelColor={'text-mm-black'} setFont={'font-jost'} />
                     </div>
                 </div>
             </section>
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className="text-4xl text-center font-semibold">WELCOME TO MAJESTIC MILES</div>
+                    <div className={`text-4xl text-center font-semibold ${setFont}`}>WELCOME TO MAJESTIC MILES</div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
 
                 <section>
-                    <section>
+                    <section className={`${setFont}`}>
                         <div className="text-3xl text-center font-semibold">Where luxury meets reliability</div>
                         <div className="my-2">
                             At Majestic Miles, we take pride in providing an unparalleled travel experience that
@@ -58,7 +58,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section className="mt-10">
+                    <section className={`mt-10 ${setFont}`}>
                         <div className="text-3xl text-center font-semibold">Why choose Majestic Miles</div>
                         <li className="my-2">
                             <b>Experienced Chauffeurs:</b> Our team of skilled and courteous chauffeurs is handpicked
@@ -79,7 +79,7 @@ export default function Home() {
                 </section>
             </section>
 
-            <section className="text-center text-4xl p-4 bg-mm-black text-white font-semibold">
+            <section className={`text-center text-4xl p-4 bg-mm-black text-white font-semibold ${setFont}`}>
                 OUR SERVICES
                 <hr className="relative border-solid border-white my-6 mx-[8%] md:mx-[40%]"></hr>
             </section>
@@ -88,7 +88,7 @@ export default function Home() {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className="rounded overflow-hidden shadow-lg hover:opacity-80 bg-neutral-800 text-white h-[250px]">
+                        className={`rounded overflow-hidden shadow-lg hover:opacity-80 bg-neutral-800 text-white tracking-wider h-[250px] ${setFont}`}>
                         <Link to={service.link}>
                             <img className="w-full h-48 object-cover" src={service.image} alt={service.name} />
                             <div className="px-6 py-4">

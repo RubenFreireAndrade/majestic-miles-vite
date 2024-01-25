@@ -3,7 +3,7 @@ import CustomerForm from '../layouts/CustomerForm';
 
 import seaport from '../../assets/seaport.jpg';
 
-export default function SeaportTransfers() {
+export default function SeaportTransfers({setFont}) {
     return (
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${seaport})`}}>
@@ -16,7 +16,7 @@ export default function SeaportTransfers() {
                             START OR FINISH YOUR JOURNEY WITH A COMFORTABLE RIDE
                         </div>
                     </div>
-                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
                         <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>

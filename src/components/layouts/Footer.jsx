@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {SocialIcon} from 'react-social-icons';
 
-export default function Footer() {
+export default function Footer({setFont}) {
     return (
         <footer class="bg-mm-black text-white p-8">
             <div class="flex justify-evenly items-center">

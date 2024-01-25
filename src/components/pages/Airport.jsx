@@ -3,7 +3,7 @@ import CustomerForm from '../layouts/CustomerForm';
 
 import heathrowTerm3 from '../../assets/heathrowTerm3.jpg';
 
-export default function Airport() {
+export default function Airport({setFont}) {
     return (
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${heathrowTerm3})`}}>
@@ -16,7 +16,7 @@ export default function Airport() {
                             YOUR CHAUFFEUR MEETS & GREETS YOU
                         </div>
                     </div>
-                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
                         <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>

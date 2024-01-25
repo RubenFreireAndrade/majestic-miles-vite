@@ -8,8 +8,11 @@ import {GrMail} from 'react-icons/gr';
 
 import MenuButton from './MenuButton';
 import mmLogo from '../../assets/mmLogo.svg';
+import mmLogo2 from '../../assets/mmLogo2.svg';
+import mmLogo3 from '../../assets/mmLogo3.svg';
+import mmLogo4 from '../../assets/mmLogo4.svg';
 
-export default function NavBar() {
+export default function NavBar({setFont}) {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -44,7 +47,7 @@ export default function NavBar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 w-full p-4 text-white"
+            className="fixed top-0 left-0 w-full px-4 py-2 text-white"
             style={{
                 backgroundColor: isMenuOpen ? 'rgba(30, 30, 30, 1)' : `rgba(30, 30, 30, ${scrollPosition / 200})`,
                 //backdropFilter: `blur(${blurAmount}px)`,
@@ -54,8 +57,8 @@ export default function NavBar() {
                 <div>
                     <Link to="/">
                         <img
-                            src={mmLogo}
-                            className="w-20 md:w-52"
+                            src={mmLogo4}
+                            className="w-24 md:w-52"
                             style={{'stroke-width': '0.02rem', stroke: 'rgb(30, 30, 30)'}}
                         />
                     </Link>

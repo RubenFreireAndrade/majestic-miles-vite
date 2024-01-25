@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
-export default function CustomerForm({setLabelColor}) {
+export default function CustomerForm({setLabelColor, setFont}) {
     const [pickup, setPickup] = useState(null);
     const [destination, setDestination] = useState(null);
     const [autoApiKey, setAutoApiKey] = useState('');
@@ -44,7 +44,7 @@ export default function CustomerForm({setLabelColor}) {
     return (
         <>
             <section className="p-5">
-                <div className="text-center text-2xl">Where to?</div>
+                <div className="text-center text-2xl font-jost">Where to?</div>
                 <form onSubmit={handleSubmit} className="mx-auto flex flex-col md:flex-row pt-3">
                     <div className="w-full">
                         <div className="mb-4">

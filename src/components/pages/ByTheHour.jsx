@@ -3,7 +3,7 @@ import CustomerForm from '../layouts/CustomerForm';
 
 import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
 
-export default function ByTheHour() {
+export default function ByTheHour({setFont}) {
     return (
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${sideFrontMerc})`}}>
@@ -16,7 +16,7 @@ export default function ByTheHour() {
                             AS DIRECTED HIRE
                         </div>
                     </div>
-                    <div className="bg-white md:rounded-lg shadow-lg mb-12 p-4 md:p-0">
+                    <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
                         <CustomerForm setLabelColor={'text-mm-black'} />
                     </div>
                 </div>
