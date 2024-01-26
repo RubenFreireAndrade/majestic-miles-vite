@@ -7,9 +7,6 @@ import {BsFillTelephoneFill} from 'react-icons/bs';
 import {GrMail} from 'react-icons/gr';
 
 import MenuButton from './MenuButton';
-import mmLogo from '../../assets/mmLogo.svg';
-import mmLogo2 from '../../assets/mmLogo2.svg';
-import mmLogo3 from '../../assets/mmLogo3.svg';
 import mmLogo4 from '../../assets/mmLogo4.svg';
 
 export default function NavBar({setFont}) {
@@ -47,7 +44,7 @@ export default function NavBar({setFont}) {
 
     return (
         <nav
-            className="fixed top-0 left-0 w-full px-4 py-2 text-white"
+            className={`fixed top-0 left-0 w-full px-4 py-2 text-white ${setFont} tracking-wider`}
             style={{
                 backgroundColor: isMenuOpen ? 'rgba(30, 30, 30, 1)' : `rgba(30, 30, 30, ${scrollPosition / 200})`,
                 //backdropFilter: `blur(${blurAmount}px)`,

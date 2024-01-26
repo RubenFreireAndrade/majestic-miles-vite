@@ -43,7 +43,7 @@ export default function CustomerForm({setLabelColor, setFont}) {
 
     return (
         <>
-            <section className="p-5">
+            <section className={`p-5 ${setFont} tracking-wide`}>
                 <div className="text-center text-2xl font-jost">Where to?</div>
                 <form onSubmit={handleSubmit} className="mx-auto flex flex-col md:flex-row pt-3">
                     <div className="w-full">

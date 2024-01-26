@@ -22,7 +22,7 @@ export default function Footer({setFont}) {
                         className="mx-1 md:mx-5"
                     />
                 </div>
-                <div className="mx-2 md:mx-5">&copy; 2024 Majestic Miles. All rights reserved.</div>
+                <div className={`mx-2 md:mx-5 ${setFont}`}>&copy; 2024 Majestic Miles. All rights reserved.</div>
             </div>
         </footer>
     );

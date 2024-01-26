@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function ContactForm() {
+export default function ContactForm({setFont}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -37,7 +37,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow-md">
+        <section className={`max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow-md ${setFont} tracking-wide`}>
             <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
@@ -89,6 +89,6 @@ export default function ContactForm() {
                     Submit
                 </button>
             </form>
-        </div>
+        </section>
     );
 }

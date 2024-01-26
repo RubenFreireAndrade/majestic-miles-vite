@@ -7,7 +7,7 @@ export default function ByTheHour({setFont}) {
     return (
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${sideFrontMerc})`}}>
-                <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
+                <div className={`grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40 ${setFont} tracking-wide`}>
                     <div className="flex flex-col mb-12 items-center text-center">
                         <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             BY THE HOUR
@@ -17,12 +17,12 @@ export default function ByTheHour({setFont}) {
                         </div>
                     </div>
                     <div className="bg-white md:rounded-lg shadow-lg mb-12 md:w-[50%]">
-                        <CustomerForm setLabelColor={'text-mm-black'} />
+                        <CustomerForm setLabelColor={'text-mm-black'} setFont={setFont} />
                     </div>
                 </div>
             </section>
 
-            <section className="mx-[10%] md:mx-[15%] my-5">
+            <section className={`mx-[10%] md:mx-[15%] my-5 ${setFont} tracking-wide`}>
                 <section>
                     <div className="text-4xl text-center font-semibold">DISCOVER THE CITY YOUR WAY</div>
                 </section>
@@ -45,7 +45,7 @@ export default function ByTheHour({setFont}) {
                 </section>
             </section>
 
-            <section className="p-5 bg-mm-black">
+            <section className={`p-5 bg-mm-black ${setFont} tracking-wide`}>
                 <div className="text-3xl text-center text-white font-semibold">LOOKING FOR SOMETHING SPECIFIC?</div>
                 <div className="text-xl text-center text-white">
                     Submit an enquiry and we will be with you soon as possible
@@ -54,7 +54,7 @@ export default function ByTheHour({setFont}) {
                 <hr className="relative border-solid border-white my-6 md:mx-[20%]"></hr>
 
                 <div>
-                    <ContactForm />
+                    <ContactForm setFont={setFont} />
                 </div>
             </section>
         </>

@@ -23,10 +23,10 @@ export default function Home({setFont}) {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className={`text-6xl text-white ${setFont}`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div className={`text-6xl text-white ${setFont} tracking-wide`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             YOUR PERSONAL CHAUFFEUR SERVICE
                         </div>
-                        <div className={`text-lg text-white ${setFont}`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div className={`text-lg text-white ${setFont} tracking-wide`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
                     </div>
@@ -38,13 +38,13 @@ export default function Home({setFont}) {
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className={`text-4xl text-center font-semibold ${setFont}`}>WELCOME TO MAJESTIC MILES</div>
+                    <div className={`text-4xl text-center font-semibold ${setFont} tracking-wide`}>WELCOME TO MAJESTIC MILES</div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
 
                 <section>
-                    <section className={`${setFont}`}>
+                    <section className={`${setFont} tracking-wide`}>
                         <div className="text-3xl text-center font-semibold">Where luxury meets reliability</div>
                         <div className="my-2">
                             At Majestic Miles, we take pride in providing an unparalleled travel experience that
@@ -58,7 +58,7 @@ export default function Home({setFont}) {
                         </div>
                     </section>
 
-                    <section className={`mt-10 ${setFont}`}>
+                    <section className={`mt-10 ${setFont} tracking-wide`}>
                         <div className="text-3xl text-center font-semibold">Why choose Majestic Miles</div>
                         <li className="my-2">
                             <b>Experienced Chauffeurs:</b> Our team of skilled and courteous chauffeurs is handpicked
@@ -79,7 +79,7 @@ export default function Home({setFont}) {
                 </section>
             </section>
 
-            <section className={`text-center text-4xl p-4 bg-mm-black text-white font-semibold ${setFont}`}>
+            <section className={`text-center text-4xl p-4 bg-mm-black text-white font-semibold ${setFont} tracking-wide`}>
                 OUR SERVICES
                 <hr className="relative border-solid border-white my-6 mx-[8%] md:mx-[40%]"></hr>
             </section>
@@ -88,7 +88,7 @@ export default function Home({setFont}) {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`rounded overflow-hidden shadow-lg hover:opacity-80 bg-neutral-800 text-white tracking-wider h-[250px] ${setFont}`}>
+                        className={`rounded overflow-hidden shadow-lg hover:opacity-80 bg-neutral-800 text-white tracking-wider h-[250px] ${setFont} tracking-wide`}>
                         <Link to={service.link}>
                             <img className="w-full h-48 object-cover" src={service.image} alt={service.name} />
                             <div className="px-6 py-4">
