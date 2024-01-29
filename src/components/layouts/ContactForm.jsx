@@ -80,7 +80,8 @@ export default function ContactForm({setFont}) {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-3 py-2 border rounded-md border-stone-300 focus:outline-none focus:border-black resize-none"
-                        required></textarea>
+                        required
+                    />
                 </div>
 
                 <button

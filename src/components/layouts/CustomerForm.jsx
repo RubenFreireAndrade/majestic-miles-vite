@@ -1,7 +1,11 @@
 import {useEffect, useRef, useState} from 'react';
+import {Link, Route, Routes, useNavigate} from 'react-router-dom';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
+import Booking from '../pages/Booking';
+
 export default function CustomerForm({setLabelColor, setFont}) {
+    const navigate = useNavigate();
     const [pickup, setPickup] = useState(null);
     const [destination, setDestination] = useState(null);
     const [autoApiKey, setAutoApiKey] = useState('');
@@ -36,8 +40,8 @@ export default function CustomerForm({setLabelColor, setFont}) {
         if (destination?.label !== undefined) formData.destination = destination.label;
 
         if (isFormValid()) {
-            // Switch page to booking page
             console.log('Form submitted:', formData);
+            navigate('/booking');
         } else alert('Please fill in all the fields before submitting the form.');
     };
 

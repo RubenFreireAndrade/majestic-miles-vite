@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
 import {IoCarSportSharp} from 'react-icons/io5';
 
-import Carousel from '../layouts/Carousel';
 import CustomerForm from '../layouts/CustomerForm';
+import ContactForm from '../layouts/ContactForm';
 
 import seaport from '../../assets/seaport.jpg';
 import mercLogo from '../../assets/mercLogo.jpg';
@@ -12,9 +12,9 @@ import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
 
 export default function Home({setFont}) {
     const services = [
-        {name: 'One Way', image: handOnCar, link: '/oneway'},
-        {name: 'Airport Transfers', image: heathrow, link: '/airports'},
-        {name: 'By The Hour', image: sideFrontMerc, link: '/bythehour'},
+        {name: 'One Way', image: heathrow, link: '/oneway'},
+        // {name: 'Airport Transfers', image: heathrow, link: '/airports'},
+        {name: 'By The Hour', image: handOnCar, link: '/bythehour'},
         {name: 'Seaport Transfers', image: seaport, link: '/seaports'},
     ];
 
@@ -23,10 +23,14 @@ export default function Home({setFont}) {
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mercLogo})`}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40">
                     <div className="flex flex-col mb-12 items-center text-center">
-                        <div className={`text-6xl text-white ${setFont} tracking-wide`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div
+                            className={`text-6xl text-white ${setFont} tracking-wide`}
+                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             YOUR PERSONAL CHAUFFEUR SERVICE
                         </div>
-                        <div className={`text-lg text-white ${setFont} tracking-wide`} style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
+                        <div
+                            className={`text-lg text-white ${setFont} tracking-wide`}
+                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             ARRIVE IN STYLE, DEPART WITH ELEGANCE: YOUR JOURNEY, OUR PASSION!
                         </div>
                     </div>
@@ -38,7 +42,9 @@ export default function Home({setFont}) {
 
             <section className="mx-[10%] md:mx-[15%] my-5">
                 <section>
-                    <div className={`text-4xl text-center font-semibold ${setFont} tracking-wide`}>WELCOME TO MAJESTIC MILES</div>
+                    <div className={`text-4xl text-center font-semibold ${setFont} tracking-wide`}>
+                        WELCOME TO MAJESTIC MILES
+                    </div>
                 </section>
 
                 <hr className="relative border-solid border-black my-6 md:mx-[20%]"></hr>
@@ -79,12 +85,13 @@ export default function Home({setFont}) {
                 </section>
             </section>
 
-            <section className={`text-center text-4xl p-4 bg-mm-black text-white font-semibold ${setFont} tracking-wide`}>
+            <section
+                className={`text-center text-4xl p-4 bg-mm-black text-white font-semibold ${setFont} tracking-wide`}>
                 OUR SERVICES
                 <hr className="relative border-solid border-white my-6 mx-[8%] md:mx-[40%]"></hr>
             </section>
 
-            <section className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-4 px-10 pb-10 md:p-1 md:px-20 bg-mm-black">
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5 px-10 pb-10 md:px-[10%] bg-mm-black">
                 {services.map((service, index) => (
                     <div
                         key={index}
@@ -92,7 +99,7 @@ export default function Home({setFont}) {
                         <Link to={service.link}>
                             <img className="w-full h-48 object-cover" src={service.image} alt={service.name} />
                             <div className="px-6 py-4">
-                                <div className="font-semibold text-xl mb-2">
+                                <div className="font-semibold text-xl">
                                     {service.name}{' '}
                                     <span className="text-xl" role="img" aria-label="right-arrow">
                                         &#10132;
@@ -102,6 +109,19 @@ export default function Home({setFont}) {
                         </Link>
                     </div>
                 ))}
+            </section>
+
+            <section className={`py-5 px-5 md:py-20 md:px-10 bg-mm-black ${setFont} tracking-wide`}>
+                <div className="text-3xl text-center text-white font-semibold">LOOKING FOR SOMETHING SPECIFIC?</div>
+                <div className="text-xl text-center text-white">
+                    Submit an enquiry and we will be with you soon as possible
+                </div>
+
+                <hr className="relative border-solid border-white my-6 md:mx-[20%]"></hr>
+
+                <div>
+                    <ContactForm setFont={setFont} />
+                </div>
             </section>
         </>
     );

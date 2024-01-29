@@ -7,7 +7,8 @@ export default function ByTheHour({setFont}) {
     return (
         <>
             <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${sideFrontMerc})`}}>
-                <div className={`grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40 ${setFont} tracking-wide`}>
+                <div
+                    className={`grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40 ${setFont} tracking-wide`}>
                     <div className="flex flex-col mb-12 items-center text-center">
                         <div className="text-6xl text-white" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             BY THE HOUR
