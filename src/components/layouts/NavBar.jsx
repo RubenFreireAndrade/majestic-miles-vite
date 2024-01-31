@@ -106,12 +106,6 @@ export default function NavBar({setFont}) {
                                             One Way
                                         </Link>
                                         <Link
-                                            to={'/airports'}
-                                            className="block px-4 py-2 hover:bg-gray-200"
-                                            style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
-                                            Airports
-                                        </Link>
-                                        <Link
                                             to={'/bythehour'}
                                             className="block px-4 py-2 hover:bg-gray-200"
                                             style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
@@ -173,9 +167,6 @@ export default function NavBar({setFont}) {
                                     <div className="absolute bg-mm-black">
                                         <Link to={'/oneway'} className="block px-4 py-2" onClick={closeMenu}>
                                             One Way
-                                        </Link>
-                                        <Link to={'/airports'} className="block px-4 py-2" onClick={closeMenu}>
-                                            Airports
                                         </Link>
                                         <Link to={'/bythehour'} className="block px-4 py-2" onClick={closeMenu}>
                                             By The Hour

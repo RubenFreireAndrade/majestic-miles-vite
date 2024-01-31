@@ -1,12 +1,12 @@
 import ContactForm from '../layouts/ContactForm';
 import CustomerForm from '../layouts/CustomerForm';
 
-import handOnCar from '../../assets/handOnCar2.jpg';
+import heathrowTerm3 from '../../assets/heathrowTerm3.jpg';
 
 export default function OneWay({setFont}) {
     return (
         <>
-            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${handOnCar})`}}>
+            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${heathrowTerm3})`}}>
                 <div
                     className={`grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40 ${setFont} tracking-wide`}>
                     <div className="flex flex-col mb-12 items-center text-center">

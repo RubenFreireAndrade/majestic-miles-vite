@@ -1,12 +1,12 @@
 import ContactForm from '../layouts/ContactForm';
 import CustomerForm from '../layouts/CustomerForm';
 
-import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
+import handOnCar2 from '../../assets/handOnCar2.jpg';
 
 export default function ByTheHour({setFont}) {
     return (
         <>
-            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${sideFrontMerc})`}}>
+            <section className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${handOnCar2})`}}>
                 <div
                     className={`grid grid-cols-1 md:grid-cols-2 md:place-items-center pt-32 md:pt-40 ${setFont} tracking-wide`}>
                     <div className="flex flex-col mb-12 items-center text-center">

@@ -27,7 +27,7 @@ const Booking = () => {
 
     return (
         <>
-            <div className="md:mx-[20%] my-20 md:my-40 border rounded shadow-lg">
+            <div className="md:mx-[20%] my-20 md:my-48 border rounded shadow-lg">
                 {step === 1 && <CarSelection onNext={handleNext} />}
                 {step === 2 && <YourDetails onNext={handleNext} onPrev={handlePrev} />}
                 {step === 3 && <Payment onSubmit={handleNext} />}
