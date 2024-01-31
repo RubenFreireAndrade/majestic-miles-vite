@@ -3,17 +3,15 @@ import {Link, Route, Routes, useNavigate} from 'react-router-dom';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 import Booking from '../pages/Booking';
+import {useFormData} from '../../utils/FormDataContext';
 
 export default function CustomerForm({setLabelColor, setFont}) {
+    const {formData, updateField} = useFormData();
+
     const navigate = useNavigate();
     const [pickup, setPickup] = useState(null);
     const [destination, setDestination] = useState(null);
     const [autoApiKey, setAutoApiKey] = useState('');
-
-    const [formData, setFormData] = useState({
-        pickup: '',
-        destination: '',
-    });
 
     useEffect(() => {
         // Make a GET request when the component mounts

@@ -10,6 +10,8 @@ const initialState = {
     email: '',
     numPassengers: '',
     numLuggage: '',
+    pickup: '',
+    destination: '',
     additionalInfo: '',
 };
 

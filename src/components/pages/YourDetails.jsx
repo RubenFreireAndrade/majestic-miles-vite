@@ -1,4 +1,3 @@
-// YourDetails.js
 import React, {useState} from 'react';
 import {useFormData} from '../../utils/FormDataContext';
 
@@ -12,14 +11,15 @@ const YourDetails = ({onNext, onPrev}) => {
 
     return (
         <div className="bg-white p-8 font-jost">
-            <h1 className="text-3xl font-bold mb-4">Book Your Chauffeur Service</h1>
-            <p className="text-gray-600 mb-8">
-                We are delighted to assist you! Please provide the following details to book your chauffeur service.
-            </p>
+            <h1 className="text-xl mb-4">Pickup: {formData.pickup}</h1>
+            <h1 className="text-xl mb-4">Destination: {formData.destination}</h1>
+
+            <hr className="relative border-solid border-mm-black my-7"></hr>
+
             <h2 className="text-2xl font-semibold mb-6">Step 2: Your Details</h2>
 
             <div className="mb-4">
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="firstName" className="block text-sm font-medium text-mm-black">
                     First Name
                 </label>
                 <input
@@ -34,7 +34,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="lastName" className="block text-sm font-medium text-mm-black">
                     Last Name
                 </label>
                 <input
@@ -48,7 +48,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="phoneNumber" className="block text-sm font-medium text-mm-black">
                     Phone Number
                 </label>
                 <input
@@ -62,7 +62,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="email" className="block text-sm font-medium text-mm-black">
                     Email
                 </label>
                 <input
@@ -76,7 +76,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="numPassengers" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="numPassengers" className="block text-sm font-medium text-mm-black">
                     Number of Passengers
                 </label>
                 <input
@@ -90,7 +90,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="numLuggage" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="numLuggage" className="block text-sm font-medium text-mm-black">
                     Number of Luggage
                 </label>
                 <input
@@ -104,7 +104,7 @@ const YourDetails = ({onNext, onPrev}) => {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-600">
+                <label htmlFor="additionalInfo" className="block text-sm font-medium text-mm-black">
                     Additional Information
                 </label>
                 <textarea
