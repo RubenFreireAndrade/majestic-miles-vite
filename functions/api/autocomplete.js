@@ -1,3 +1,3 @@
-export async function onRequestGet(context) {
-    return await context.env.VITE_GOOGLE_MAPS_KEY;
+export async function onRequest(context) {
+    return new Response(context.env.VITE_GOOGLE_MAPS_KEY);
 }

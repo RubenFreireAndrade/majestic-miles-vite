@@ -15,17 +15,34 @@ export default function CustomerForm({setLabelColor, setFont}) {
 
     useEffect(() => {
         // Make a GET request when the component mounts
-        const fetchData = async () => {
-            try {
-                const response = await fetch('api/autocomplete');
-                const result = await response.json();
-                setAutoApiKey(result);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
+        // const fetchData = async () => {
+        //     try {
+        //         const response = await fetch('/api/autocomplete');
+        //         const result = await response.json();
+        //         setAutoApiKey(result);
+        //     } catch (error) {
+        //         console.error('Error fetching data:', error);
+        //     }
+        // };
+
+        // fetchData();
+
+        // fetch('/api/autocomplete')
+        // .then(res => res.json())
+        // .then(data => {
+        //     setAutoApiKey(data);
+        //     console.log(autoApiKey);
+        // }).catch(err => console.log({autoCompleteApi: err}));
+
+        const getAutoComplete = async () => {
+            const resp = await fetch('/api/autocomplete');
+            const data = await resp.json();
+            console.log(data);
+            setAutoApiKey(data);
+            console.log(autoApiKey);
         };
 
-        fetchData();
+        getAutoComplete();
     }, []);
 
     const isFormValid = () => {
@@ -72,7 +89,7 @@ export default function CustomerForm({setLabelColor, setFont}) {
                                         indicatorsContainer: provided => ({}),
                                     },
                                 }}
-                                apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
+                                apiKey={autoApiKey || import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
                         <div className="mb-4">
@@ -98,7 +115,7 @@ export default function CustomerForm({setLabelColor, setFont}) {
                                         indicatorsContainer: provided => ({}),
                                     },
                                 }}
-                                apiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}
+                                apiKey={autoApiKey || import.meta.env.VITE_GOOGLE_MAPS_KEY}
                             />
                         </div>
                         <div className="text-center mt-4">
