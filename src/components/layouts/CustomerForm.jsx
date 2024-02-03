@@ -36,10 +36,10 @@ export default function CustomerForm({setLabelColor, setFont}) {
 
         const getAutoComplete = async () => {
             const resp = await fetch('/api/autocomplete');
-            const data = await resp.json();
-            console.log(data);
+            const data = resp.body;
+            //console.log(data);
             setAutoApiKey(data);
-            console.log(autoApiKey);
+            //console.log(autoApiKey);
         };
 
         getAutoComplete();
