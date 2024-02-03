@@ -34,7 +34,6 @@ const Booking = () => {
             // body: JSON.stringify({amount: 100}),
         });
         
-        console.log(res);
         //const data = await res.json();
         //console.log(data);
         return res;
@@ -45,7 +44,7 @@ const Booking = () => {
             <div className="md:mx-[20%] my-20 md:my-48 border rounded shadow-lg">
                 {step === 1 && <CarSelection onNext={handleNext} />}
                 {step === 2 && <YourDetails onNext={handleNext} onPrev={handlePrev} />}
-                {step === 3 && <Payment onSubmit={getStripe} />}
+                {step === 3 && <Payment onSubmit={""} />}
 
                 {/* {step > 1 && <button onClick={handlePrev}>Previous</button>} */}
             </div>
