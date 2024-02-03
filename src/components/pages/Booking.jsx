@@ -33,8 +33,10 @@ const Booking = () => {
             // },
             // body: JSON.stringify({amount: 100}),
         });
+        
         //const data = await res.json();
         //console.log(data);
+        return res;
     };
 
     return (
