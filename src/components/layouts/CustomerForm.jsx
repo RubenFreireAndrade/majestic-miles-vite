@@ -14,32 +14,10 @@ export default function CustomerForm({setLabelColor, setFont}) {
     const [autoApiKey, setAutoApiKey] = useState('');
 
     useEffect(() => {
-        // Make a GET request when the component mounts
-        // const fetchData = async () => {
-        //     try {
-        //         const response = await fetch('/api/autocomplete');
-        //         const result = await response.json();
-        //         setAutoApiKey(result);
-        //     } catch (error) {
-        //         console.error('Error fetching data:', error);
-        //     }
-        // };
-
-        // fetchData();
-
-        // fetch('/api/autocomplete')
-        // .then(res => res.json())
-        // .then(data => {
-        //     setAutoApiKey(data);
-        //     console.log(autoApiKey);
-        // }).catch(err => console.log({autoCompleteApi: err}));
-
         const getAutoComplete = async () => {
             const resp = await fetch('/api/autocomplete');
             const data = resp.body;
-            //console.log(data);
             setAutoApiKey(data);
-            //console.log(autoApiKey);
         };
 
         getAutoComplete();
