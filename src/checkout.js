@@ -1,9 +1,11 @@
 import Stripe from 'stripe';
 
 export const create = async (req, env) => {
+    console.log("inside create function");
     const stripe = new Stripe(env, {
         httpClient: Stripe.createFetchHttpClient(),
     });
+
     const {origin} = new URL(req.url);
     console.log(origin);
     // Also seperate the data coming from request.
@@ -29,6 +31,7 @@ export const create = async (req, env) => {
             cancel_url: `${origin}`,
         });
 
+        console.log(session.url);
         return Response.redirect(session.url, 303);
     } catch (error) {
         return Response(error.message, {status: 500});
