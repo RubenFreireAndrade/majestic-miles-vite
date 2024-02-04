@@ -30,7 +30,11 @@ export const create = async (req, env) => {
             cancel_url: `${origin}`,
         });
 
-        return Response.redirect(session.url, 303);
+        return Response.redirect(session.url, 303, {
+            headers: {
+                'Content-Type': 'text/html',
+            }
+        });
     } catch (error) {
         return Response(error.message, {status: 500});
     }
