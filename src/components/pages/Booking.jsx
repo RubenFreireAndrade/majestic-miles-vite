@@ -26,7 +26,7 @@ const Booking = () => {
     };
 
     const getStripe = async () => {
-        const res = await fetch('/api/stripe', {
+        const res = fetch('/api/stripe', {
             method: 'POST',
             // headers: {
             //     'Content-Type': 'application/json',
