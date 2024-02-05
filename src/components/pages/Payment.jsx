@@ -1,13 +1,16 @@
 // Payment.js
 import React from 'react';
 
-const Payment = ({onSubmit}) => {
+const Payment = ({onSubmit, isJobSent}) => {
     return (
-        <div>
-            <h2>Step 3: Payment</h2>
-            {/* Payment details input fields go here */}
-            <button onClick={onSubmit}>Submit</button>
-        </div>
+        <>
+            <div>
+                <h2>Step 3: Payment</h2>
+                {/* Details from previous steps go here */}
+                {/* Stripe API goes here once it works. */}
+                <button onClick={onSubmit}>Submit</button>
+            </div>
+        </>
     );
 };
 

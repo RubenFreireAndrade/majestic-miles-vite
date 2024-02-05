@@ -6,12 +6,13 @@ const FormDataContext = createContext();
 const initialState = {
     firstName: '',
     lastName: '',
-    phoneNumber: '',
-    email: '',
-    numPassengers: '',
-    numLuggage: '',
     pickup: '',
     destination: '',
+    email: '',
+    phoneNumber: '',
+    numPassengers: '',
+    numLuggage: '',
+    flightNumber: '',
     additionalInfo: '',
 };
 

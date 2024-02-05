@@ -25,20 +25,25 @@ async function sendEmail(body, context) {
             personalizations: [
                 {
                     to: [{email: context.env.GMAIL_USER}],
-                    subject: `New Job Query From ${body.phone}`,
+                    subject: `New Job Query From ${body.phoneNumber}`,
                 },
             ],
             from: {email: context.env.GMAIL_USER},
             content: [
                 {
                     type: 'text/plain',
-                    value: `New Job Query From ${body.phone}
+                    value: `New Job Query From ${body.phoneNumber}
                 
-                Name: ${body.name}
-                Phone: ${body.phone}
-                Email: ${body.email}
+                First name: ${body.firstName}
+                Last name: ${body.lastName}
+                Pickup: ${body.pickup}
                 Destination: ${body.destination}
-                Additional Info: ${body.additional_info}`,
+                Email: ${body.email}
+                Phone: ${body.phoneNumber}
+                Number of passengers: ${body.numPassengers}
+                Number of luggage: ${body.numLuggage}
+                Flight number: ${body.flightNumber}
+                Additional info: ${body.additionalInfo}`,
                 },
             ],
         }),

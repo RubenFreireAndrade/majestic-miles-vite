@@ -3,10 +3,15 @@ import {useFormData} from '../../utils/FormDataContext';
 
 const YourDetails = ({onNext, onPrev}) => {
     const {formData, updateField} = useFormData();
+    const [checked, setChecked] = useState(false);
 
     const handleChange = e => {
         const {name, value} = e.target;
         updateField(name, value);
+    };
+
+    const handleCheckbox = () => {
+        setChecked(!checked);
     };
 
     return (
@@ -28,8 +33,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    required
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
 
@@ -43,7 +47,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
 
@@ -57,7 +61,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
 
@@ -71,7 +75,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
 
@@ -85,7 +89,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="numPassengers"
                     value={formData.numPassengers}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
 
@@ -99,9 +103,34 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="numLuggage"
                     value={formData.numLuggage}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
                 />
             </div>
+
+            <div className="mb-4">
+                <label className="block text-sm font-medium text-mm-black">
+                    Have a Flight Number?
+                    <input
+                        type="checkbox"
+                        value={formData.flightNumber}
+                        onChange={handleCheckbox}
+                        className="m-2 w-5 h-5"
+                    />
+                </label>
+            </div>
+
+            {checked && (
+                <div className="mb-4">
+                    <input
+                        type="text"
+                        id="flightNumber"
+                        name="flightNumber"
+                        value={formData.flightNumber}
+                        onChange={handleChange}
+                        className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
+                    />
+                </div>
+            )}
 
             <div className="mb-4">
                 <label htmlFor="additionalInfo" className="block text-sm font-medium text-mm-black">
@@ -112,19 +141,19 @@ const YourDetails = ({onNext, onPrev}) => {
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300 resize-none"></textarea>
+                    className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black resize-none"></textarea>
             </div>
 
             <div className="flex justify-between items-center">
                 <button
                     onClick={onPrev}
-                    className="bg-gray-400 text-white px-4 py-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring focus:border-blue-300">
+                    className="bg-gray-400 text-white px-4 py-2 rounded-md hover:bg-gray-500 focus:outline-none focus:border-mm-black">
                     Previous
                 </button>
                 <button
                     onClick={onNext}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                    Next
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:border-mm-black">
+                    Submit
                 </button>
             </div>
         </div>

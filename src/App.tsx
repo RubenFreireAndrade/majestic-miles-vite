@@ -12,6 +12,8 @@ import Airport from './components/pages/Airport';
 import ByTheHour from './components/pages/ByTheHour';
 import SeaportTransfers from './components/pages/Seaport';
 import Booking from './components/pages/Booking';
+import Success from './components/pages/redirect/Success';
+import Failed from './components/pages/redirect/Failed';
 
 import {FormDataProvider} from './utils/FormDataContext';
 
@@ -31,6 +33,8 @@ export default function App() {
                     <Route path="/booking" element={<Booking />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/success" element={<Success />} />
+                    <Route path="/failed" element={<Failed />} />
                 </Routes>
             </FormDataProvider>
 
