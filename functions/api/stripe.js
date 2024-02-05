@@ -1,5 +1,4 @@
-//import * as checkout from '../../src/checkout';
-const checkout = require('../../src/checkout');
+import * as checkout from '../../checkout';
 
 export async function onRequest(context) {
     console.log("in stripe endpoint");
