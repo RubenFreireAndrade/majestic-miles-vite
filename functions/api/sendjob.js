@@ -33,7 +33,6 @@ async function sendEmail(body, context) {
                 {
                     type: 'text/plain',
                     value: `New Job Query From ${body.phoneNumber}
-                
                 First name: ${body.firstName}
                 Last name: ${body.lastName}
                 Pickup: ${body.pickup}

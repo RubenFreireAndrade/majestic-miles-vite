@@ -49,8 +49,9 @@ const Booking = () => {
     return (
         <>
             <div className="md:mx-[20%] my-20 md:my-48 border rounded shadow-lg">
-                {step === 1 && <CarSelection onNext={handleNext} />}
-                {step === 2 && <YourDetails onNext={sendJob} onPrev={handlePrev} />}
+                {/* {step === 1 && <CarSelection onNext={handleNext} />} */}
+                {step === 0 && navigate('/')}
+                {step === 1 && <YourDetails onNext={sendJob} onPrev={handlePrev} />}
 
                 {/* Implement this when you have the Payment component ready */}
                 {/* {step === 3 && <Payment onSubmit={sendJob} isJobSent={isJobSent} />} */}
