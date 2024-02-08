@@ -7,7 +7,7 @@ export default function Footer({setFont}) {
             <div class="flex justify-evenly items-center">
                 <div class="flex">
                     <SocialIcon
-                        url="https://www.instagram.com/majestic__miles/"
+                        url="https://www.tiktok.com/@majestic.miles"
                         network="tiktok"
                         className="mx-1 md:mx-5"
                     />
@@ -17,7 +17,7 @@ export default function Footer({setFont}) {
                         className="mx-1 md:mx-5"
                     />
                     <SocialIcon
-                        url="https://www.instagram.com/majestic__miles/"
+                        url="https://www.linkedin.com/company/majestic-miles/"
                         network="linkedin"
                         className="mx-1 md:mx-5"
                     />

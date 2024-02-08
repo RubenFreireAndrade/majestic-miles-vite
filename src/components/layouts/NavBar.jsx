@@ -70,7 +70,7 @@ export default function NavBar({setFont}) {
                                 size="1.5rem"
                             />
                             <span className="mx-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
-                                90123908981
+                                07886 586682
                             </span>
                         </div>
                         <div className="flex flex-row">
@@ -145,7 +145,7 @@ export default function NavBar({setFont}) {
                         <div className="flex flex-col text-white text-lg items-center h-full">
                             <div className="flex">
                                 <BsFillTelephoneFill />
-                                <span className="ml-4">90123908981</span>
+                                <span className="ml-4">07886 586682</span>
                             </div>
                             <div className="flex">
                                 <AiOutlineMail />
