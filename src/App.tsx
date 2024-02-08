@@ -31,7 +31,7 @@ export default function App() {
                     <Route path="/bythehour" element={<ByTheHour setFont={font} />} />
                     <Route path="/seaports" element={<SeaportTransfers setFont={font} />} />
                     <Route path="/booking" element={<Booking />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/about" element={<About setFont={font} />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/success" element={<Success />} />
                     <Route path="/failed" element={<Failed />} />
