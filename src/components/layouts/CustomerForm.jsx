@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import {Link, Route, Routes, useNavigate} from 'react-router-dom';
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import GooglePlacesAutocomplete, {geocodeByAddress, getLatLng} from 'react-google-places-autocomplete';
 
 import Booking from '../pages/Booking';
 import {useFormData} from '../../utils/FormDataContext';
@@ -14,32 +14,10 @@ export default function CustomerForm({setLabelColor, setFont}) {
     const [autoApiKey, setAutoApiKey] = useState('');
 
     useEffect(() => {
-        // Make a GET request when the component mounts
-        // const fetchData = async () => {
-        //     try {
-        //         const response = await fetch('/api/autocomplete');
-        //         const result = await response.json();
-        //         setAutoApiKey(result);
-        //     } catch (error) {
-        //         console.error('Error fetching data:', error);
-        //     }
-        // };
-
-        // fetchData();
-
-        // fetch('/api/autocomplete')
-        // .then(res => res.json())
-        // .then(data => {
-        //     setAutoApiKey(data);
-        //     console.log(autoApiKey);
-        // }).catch(err => console.log({autoCompleteApi: err}));
-
         const getAutoComplete = async () => {
             const resp = await fetch('/api/autocomplete');
             const data = resp.body;
-            //console.log(data);
             setAutoApiKey(data);
-            //console.log(autoApiKey);
         };
 
         getAutoComplete();
@@ -55,7 +33,16 @@ export default function CustomerForm({setLabelColor, setFont}) {
         if (destination?.label !== undefined) formData.destination = destination.label;
 
         if (isFormValid()) {
-            console.log('Form submitted:', formData);
+            const pickupCoords = await geocodeByAddress(formData.pickup);
+            const pickLatLng = await getLatLng(pickupCoords[0]);
+
+            const destinationCoords = await geocodeByAddress(formData.destination);
+            const destLatLng = await getLatLng(destinationCoords[0]);
+
+            console.log(pickLatLng);
+            console.log(destLatLng);
+
+            //console.log('Form submitted:', formData);
             navigate('/booking');
         } else alert('Please fill in all the fields before submitting the form.');
     };

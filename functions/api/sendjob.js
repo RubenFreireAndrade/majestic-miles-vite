@@ -37,6 +37,8 @@ async function sendEmail(body, context) {
                 Last name: ${body.lastName}
                 Pickup: ${body.pickup}
                 Destination: ${body.destination}
+                Date: ${body.date}
+                Time: ${body.time}
                 Email: ${body.email}
                 Phone: ${body.phoneNumber}
                 Number of passengers: ${body.numPassengers}

@@ -8,6 +8,8 @@ const initialState = {
     lastName: '',
     pickup: '',
     destination: '',
+    date: '',
+    time: '',
     email: '',
     phoneNumber: '',
     numPassengers: '',
