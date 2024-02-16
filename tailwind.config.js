@@ -6,6 +6,9 @@ export default {
             colors: {
                 'mm-black': '#1E1E1E',
             },
+            screens: {
+                samFold: '350px',
+            },
         },
         fontFamily: {
             jost: ['Jost', 'sans-serif'],

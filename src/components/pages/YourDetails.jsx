@@ -23,32 +23,34 @@ const YourDetails = ({onNext, onPrev}) => {
 
             <h2 className="text-2xl font-semibold mb-6">Step 2: Your Details</h2>
 
-            <div className="mb-4">
-                <label htmlFor="date" className="block text-sm font-medium text-gray-600">
-                    Date
-                </label>
-                <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
-            </div>
+            <div className="samFold:flex flex-row">
+                <div className="w-full mb-4">
+                    <label htmlFor="date" className="block text-sm font-medium text-gray-600">
+                        Date
+                    </label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        value={formData.date}
+                        onChange={handleChange}
+                        className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
+                    />
+                </div>
 
-            <div className="mb-4">
-                <label htmlFor="time" className="block text-sm font-medium text-gray-600">
-                    Time
-                </label>
-                <input
-                    type="time"
-                    id="time"
-                    name="time"
-                    value={formData.time}
-                    onChange={handleChange}
-                    className="border p-2 w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
-                />
+                <div className="w-full mb-4">
+                    <label htmlFor="time" className="block text-sm font-medium text-gray-600">
+                        Time
+                    </label>
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        value={formData.time}
+                        onChange={handleChange}
+                        className="border p-2 w-full rounded-md focus:outline-none focus:border-mm-black"
+                    />
+                </div>
             </div>
 
             <div className="mb-4">

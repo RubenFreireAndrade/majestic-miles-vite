@@ -32,7 +32,7 @@ export default function App() {
                     <Route path="/seaports" element={<SeaportTransfers setFont={font} />} />
                     <Route path="/booking" element={<Booking />} />
                     <Route path="/about" element={<About setFont={font} />} />
-                    <Route path="/contact" element={<Contact setFont={font}/>} />
+                    <Route path="/contact" element={<Contact setFont={font} />} />
                     <Route path="/success" element={<Success />} />
                     <Route path="/failed" element={<Failed />} />
                 </Routes>
