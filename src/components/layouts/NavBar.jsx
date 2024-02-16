@@ -149,7 +149,9 @@ export default function NavBar({setFont}) {
                             </div>
                             <div className="flex">
                                 <AiOutlineMail />
-                                <span className="ml-4">info.majesticmiles@gmail.com</span>
+                                <span className="ml-4">
+                                    <a href="mailto:info.majesticmiles@gmail.com">info.majesticmiles@gmail.com</a>
+                                </span>
                             </div>
 
                             <hr className="relative border-solid border-white w-1/2 my-6"></hr>

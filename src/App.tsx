@@ -19,6 +19,7 @@ import {FormDataProvider} from './utils/FormDataContext';
 
 export default function App() {
     const font = 'font-jost';
+
     return (
         <>
             <NavBar setFont={font} />
