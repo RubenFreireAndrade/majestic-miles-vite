@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {useFormData} from '../../utils/FormDataContext';
 
-const YourDetails = ({onNext, onPrev}) => {
+export default YourDetails = ({onNext, onPrev}) => {
     const {formData, updateField} = useFormData();
+    const [errMessage, setErrMessage] = useState('');
     const [checked, setChecked] = useState(false);
 
     const handleChange = e => {
@@ -12,6 +13,30 @@ const YourDetails = ({onNext, onPrev}) => {
 
     const handleCheckbox = () => {
         setChecked(!checked);
+    };
+
+    const validateForm = () => {
+        let isFormValid = true;
+        let errMsg = '';
+
+        for (const key in formData) {
+            if (formData.hasOwnProperty(key)) {
+                if (key === 'flightNumber' && !checked) continue;
+                if (formData[key].trim() === '') {
+                    isFormValid = false;
+                    errMsg += `${key} is required.\n`;
+                }
+            }
+        }
+
+        setErrMessage(errMsg);
+        return isFormValid;
+    };
+
+    const handleSubmit = () => {
+        const isFormValid = validateForm();
+        if (isFormValid) onNext();
+        else alert('Please fill in all required fields:\n' + errMessage);
     };
 
     return (
@@ -181,7 +206,7 @@ const YourDetails = ({onNext, onPrev}) => {
                     Previous
                 </button>
                 <button
-                    onClick={onNext}
+                    onClick={handleSubmit}
                     className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:border-mm-black">
                     Submit
                 </button>
@@ -189,5 +214,3 @@ const YourDetails = ({onNext, onPrev}) => {
         </div>
     );
 };
-
-export default YourDetails;
