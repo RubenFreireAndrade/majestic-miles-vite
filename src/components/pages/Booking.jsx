@@ -1,4 +1,3 @@
-// BookingForm.js
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 
@@ -8,7 +7,7 @@ import CarSelection from '../pages/CarSelection';
 
 import {useFormData} from '../../utils/FormDataContext';
 
-const Booking = () => {
+export default function Booking() {
     const {formData, updateField} = useFormData();
     const navigate = useNavigate();
 
@@ -59,5 +58,3 @@ const Booking = () => {
         </>
     );
 };
-
-export default Booking;
