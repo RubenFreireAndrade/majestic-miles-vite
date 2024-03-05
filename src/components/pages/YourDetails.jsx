@@ -111,7 +111,7 @@ export default function YourDetails ({onNext, onPrev}) {
                     Phone Number
                 </label>
                 <input
-                    type="text"
+                    type="number"
                     id="phoneNumber"
                     name="phoneNumber"
                     value={formData.phoneNumber}
