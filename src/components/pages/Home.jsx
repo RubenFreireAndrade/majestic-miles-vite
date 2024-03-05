@@ -81,6 +81,11 @@ export default function Home({setFont}) {
                             local knowledge. Whether you're a visitor or a resident, our drivers are well-versed in the
                             best routes and destinations, ensuring a smooth and efficient journey.
                         </li>
+                        <li className="my-2">
+                            <b>Waiting time:</b> Benefit from a complimentary waiting time of one hour for all bookings. Find out more in our{' '}
+                            <Link to="/about" className="text-blue-400 font-semibold">about</Link>
+                            {' '}page.
+                        </li>
                     </section>
                 </section>
             </section>
