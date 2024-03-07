@@ -57,6 +57,7 @@ export default function CustomerForm({setLabelColor, setFont}) {
                             <label className={`block text-sm font-bold ${setLabelColor}`}>Pickup Location</label>
                             <GooglePlacesAutocomplete
                                 debounce={1000}
+                                apiOptions={{language: 'en', region: 'GB'}}
                                 selectProps={{
                                     name: 'pickup',
                                     placeholder: 'Enter Location...',
@@ -83,6 +84,7 @@ export default function CustomerForm({setLabelColor, setFont}) {
                             <label className={`block text-sm font-bold ${setLabelColor}`}>Destination</label>
                             <GooglePlacesAutocomplete
                                 debounce={1000}
+                                apiOptions={{language: 'en', region: 'GB'}}
                                 selectProps={{
                                     name: 'destination',
                                     placeholder: 'Enter Location...',
