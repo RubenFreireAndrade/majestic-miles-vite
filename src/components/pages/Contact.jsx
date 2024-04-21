@@ -2,6 +2,7 @@ import ContactForm from '../layouts/ContactForm';
 
 import {GrMail} from 'react-icons/gr';
 import {BsFillTelephoneFill} from 'react-icons/bs';
+import {IoLogoWhatsapp} from 'react-icons/io';
 
 export default function Contact(setFont) {
     return (
@@ -9,7 +10,11 @@ export default function Contact(setFont) {
             <div className={`bg-mm-black text-white font-${setFont} pt-48 pb-20`}>
                 <section>
                     <div className="flex flex-row place-content-center">
-                        <BsFillTelephoneFill className="md:ml-4" size="1.2rem" />
+                        <IoLogoWhatsapp
+                            size="1.4rem"
+                            className="md:ml-4"
+                            style={{'stroke-width': '0.3rem', stroke: 'rgb(30, 30, 30)'}}
+                        />
                         <span className="mx-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                             07886 586682
                         </span>

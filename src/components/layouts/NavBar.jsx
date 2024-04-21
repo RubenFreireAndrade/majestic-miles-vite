@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 import {AiOutlineMail} from 'react-icons/ai';
+import {IoLogoWhatsapp} from 'react-icons/io';
+import {AiOutlineWhatsApp} from 'react-icons/ai';
 import {IoIosArrowDown} from 'react-icons/io';
 import {BsFillTelephoneFill} from 'react-icons/bs';
 import {GrMail} from 'react-icons/gr';
+import {SocialIcon} from 'react-social-icons';
 
 import MenuButton from './MenuButton';
 import mmLogo4 from '../../assets/mmLogo4.svg';
@@ -64,10 +67,10 @@ export default function NavBar({setFont}) {
                 <div className="hidden md:flex md:flex-col font-bold text-[1rem]">
                     <div className="flex flex-col md:flex-row">
                         <div className="flex flex-row">
-                            <BsFillTelephoneFill
+                            <IoLogoWhatsapp
+                                size="1.7rem"
                                 className="md:ml-4"
-                                style={{'stroke-width': '0.02rem', stroke: 'rgb(30, 30, 30)'}}
-                                size="1.5rem"
+                                style={{'stroke-width': '0.3rem', stroke: 'rgb(30, 30, 30)'}}
                             />
                             <span className="mx-2" style={{'text-shadow': 'rgb(30, 30, 30) 1px 1px'}}>
                                 07886 586682
@@ -144,7 +147,11 @@ export default function NavBar({setFont}) {
                     <div className="md:hidden fixed inset-0 bg-mm-black bg-opacity-90 h-3/4 mt-[18%] py-12 z-50">
                         <div className="flex flex-col text-white text-lg items-center h-full">
                             <div className="flex">
-                                <BsFillTelephoneFill />
+                                <IoLogoWhatsapp
+                                    size="1.4rem"
+                                    className="md:ml-4"
+                                    style={{'stroke-width': '0.3rem', stroke: 'rgb(30, 30, 30)'}}
+                                />
                                 <span className="ml-4">07886 586682</span>
                             </div>
                             <div className="flex">

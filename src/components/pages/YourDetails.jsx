@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useFormData} from '../../utils/FormDataContext';
 
-export default function YourDetails ({onNext, onPrev}) {
+export default function YourDetails({onNext, onPrev}) {
     const {formData, updateField} = useFormData();
     const [errMessage, setErrMessage] = useState('');
     const [checked, setChecked] = useState(false);
@@ -213,4 +213,4 @@ export default function YourDetails ({onNext, onPrev}) {
             </div>
         </div>
     );
-};
+}

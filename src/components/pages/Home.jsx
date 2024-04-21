@@ -82,9 +82,12 @@ export default function Home({setFont}) {
                             best routes and destinations, ensuring a smooth and efficient journey.
                         </li>
                         <li className="my-2">
-                            <b>Waiting time:</b> Benefit from a complimentary waiting time of one hour for all bookings. Find out more in our{' '}
-                            <Link to="/about" className="text-blue-400 font-semibold">about</Link>
-                            {' '}page.
+                            <b>Waiting time:</b> Benefit from a complimentary waiting time of one hour for all bookings.
+                            Find out more in our{' '}
+                            <Link to="/about" className="text-blue-400 font-semibold">
+                                about
+                            </Link>{' '}
+                            page.
                         </li>
                     </section>
                 </section>

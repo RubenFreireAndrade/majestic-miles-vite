@@ -41,8 +41,6 @@ export default function CustomerForm({setLabelColor, setFont}) {
 
             console.log(pickLatLng);
             console.log(destLatLng);
-
-            //console.log('Form submitted:', formData);
             navigate('/booking');
         } else alert('Please fill in all the fields before submitting the form.');
     };

@@ -1,5 +1,5 @@
 import ContactForm from '../layouts/ContactForm';
-import { faqResponses } from '../layouts/Faq';
+import {faqResponses} from '../layouts/Faq';
 
 import sideFrontMerc from '../../assets/sideFrontMerc.jpg';
 
